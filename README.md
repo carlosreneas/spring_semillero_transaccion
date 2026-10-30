@@ -50,9 +50,13 @@ HTTP Response (JSON)
 
 ---
 
-## 2. Modelo Relacional y Migración Flyway
+## 2. Modelo Relacional y Migraciones Flyway
 
-El esquema se versiona mediante **Flyway** (`src/main/resources/db/migration/V1__crear_estructura.sql`). Hibernate opera con `spring.jpa.hibernate.ddl-auto=validate`.
+El esquema se versiona mediante **Flyway** en `src/main/resources/db/migration/`:
+- `V1__crear_estructura.sql`: Creación de tablas (`directores`, `semilleros`, `lineas`, `semillero_lineas`, `integrantes`), claves foráneas, restricciones de unicidad e índice parcial.
+- `V2__datos_prueba.sql`: Carga inicial de datos de prueba (semilleros institucionales `SIAWEB` y `SIABD`, directores, líneas e integrantes cumpliendo todas las reglas de negocio).
+
+Hibernate opera con `spring.jpa.hibernate.ddl-auto=validate`.
 
 ```mermaid
 erDiagram
