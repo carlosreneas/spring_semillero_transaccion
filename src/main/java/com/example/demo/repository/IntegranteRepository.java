@@ -9,4 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface IntegranteRepository extends JpaRepository<Integrante, Long> {
     List<Integrante> findBySemilleroId(Long semilleroId);
     boolean existsBySemilleroIdAndCodigo(Long semilleroId, String codigo);
+    java.util.Optional<Integrante> findBySemilleroIdAndCodigo(Long semilleroId, String codigo);
 }
