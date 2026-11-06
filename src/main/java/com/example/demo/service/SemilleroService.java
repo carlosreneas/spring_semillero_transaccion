@@ -139,11 +139,42 @@ public class SemilleroService {
     }
 
     public SemilleroResponse toResponse(Semillero guardado) {
+        SemilleroResponse.DirectorResumen dirResumen = guardado.getDirector() != null
+                ? new SemilleroResponse.DirectorResumen(
+                        guardado.getDirector().getId(),
+                        guardado.getDirector().getNombre(),
+                        guardado.getDirector().getCorreo())
+                : null;
+
+        List<String> lineasNombres = guardado.getLineas() != null
+                ? guardado.getLineas().stream().map(Linea::getNombre).sorted().toList()
+                : List.of();
+
+        List<SemilleroResponse.IntegranteResumen> integrantesResumen = guardado.getIntegrantes() != null
+                ? guardado.getIntegrantes().stream()
+                        .sorted((a, b) -> Boolean.compare(b.isEsLider(), a.isEsLider()))
+                        .map(i -> new SemilleroResponse.IntegranteResumen(
+                                i.getId(),
+                                i.getCodigo(),
+                                i.getNombre(),
+                                i.getPrograma(),
+                                i.isEsLider()))
+                        .toList()
+                : List.of();
+
         return new SemilleroResponse(
                 guardado.getId(),
+                guardado.getNombre(),
                 guardado.getSigla(),
-                guardado.getIntegrantes().size(),
-                "REGISTRADO"
+                guardado.getGrupoInvestigacion(),
+                guardado.getMision(),
+                guardado.getVision(),
+                guardado.getObjetivoGeneral(),
+                guardado.getIntegrantes() != null ? guardado.getIntegrantes().size() : 0,
+                "REGISTRADO",
+                dirResumen,
+                lineasNombres,
+                integrantesResumen
         );
     }
 
