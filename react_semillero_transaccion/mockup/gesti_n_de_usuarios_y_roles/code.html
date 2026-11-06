@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed-dim":"#bcc7de","on-error":"#ffffff","surface-container-low":"#eff4ff","surface-dim":"#cbdbf5","outline":"#906f6e","surface-container-high":"#dce9ff","error-container":"#ffdad6","inverse-primary":"#ffb3b1","on-tertiary-fixed":"#00174b","primary":"#9e001f","on-primary-fixed-variant":"#92001c","surface-bright":"#f8f9ff","on-primary":"#ffffff","surface-tint":"#bf0229","primary-fixed":"#ffdad8","background":"#f8f9ff","on-secondary-fixed-variant":"#3c475a","tertiary-fixed":"#dbe1ff","on-tertiary-container":"#dae1ff","on-primary-fixed":"#410007","on-secondary-container":"#586377","on-tertiary":"#ffffff","inverse-surface":"#213145","tertiary-fixed-dim":"#b4c5ff","surface-container":"#e5eeff","inverse-on-surface":"#eaf1ff","surface-variant":"#d3e4fe","on-surface":"#0b1c30","primary-container":"#c8102e","surface-container-highest":"#d3e4fe","secondary":"#545f73","surface-container-lowest":"#ffffff","outline-variant":"#e5bdbb","surface":"#f8f9ff","tertiary-container":"#1259e2","secondary-container":"#d5e0f8","on-tertiary-fixed-variant":"#003ea8","on-error-container":"#93000a","tertiary":"#0043b4","secondary-fixed":"#d8e3fb","on-secondary-fixed":"#111c2d","on-secondary":"#ffffff","on-background":"#0b1c30","primary-fixed-dim":"#ffb3b1","on-surface-variant":"#5c403f","on-primary-container":"#ffdad8","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","space-lg":"1.5rem","margin":"2rem","gutter-mobile":"1rem","space-xl":"2rem","space-md":"1rem","margin-mobile":"1rem"},"fontFamily":{"body-lg":["Inter"],"display":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display":["36px",{"lineHeight":"44px","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-inverse-surface/90"><img alt="Logo UFPS Investigación" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwVf3O-zxqkJUT1_xbYdJsq2pHY1fiJuCUlyote5mWHKJDG0BQzFQGNKpvJZZEi5Kumu9dSnXLQ1MAcRrZ1FCvkizu8MtLEwFyvO3b31Ob6k5mDcDvWxmPnAQv72gtDmVxQvR49EbkZzUCKksiOG-EccES2AgNUxom4x0aIMnnQijgGruiXw1v7dUcbl3T9d2jti3lCH14QXxZ1LqEQTy8c94KrhNkHU_fQl1Btww"/><div class="flex flex-col leading-tight"><span class="font-headline-sm text-headline-sm text-surface-container-lowest font-bold tracking-tight">UFPS</span><span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-wider">Semilleros I+D+i</span></div></div><div class="px-space-md py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim px-space-xs">Módulos de Gestión</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-lg border-l-4 border-primary-fixed"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="semilleros" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span>Semilleros</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="mis-semilleros" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span>Mis Semilleros</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="registrar-semillero" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>Registrar Semillero</span></div><span class="bg-primary-container text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded-full">ADMIN</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-label-lg border-l-4 border-primary-fixed" data-path="usuarios-y-roles" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Usuarios y Roles</span></a></nav></div><div class="flex flex-col pb-space-md px-space-sm"><div class="px-space-md py-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim px-space-xs">Ayuda y Soporte</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-variant/30 text-surface-container-lowest"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="documentacion" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>Documentación / Guía UFPS</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="soporte-tecnico" href="#"><span class="material-symbols-outlined text-[18px]">headset_mic</span><span>Soporte Técnico</span></a></nav></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-xs font-label-md text-label-md text-secondary"><span class="hover:text-primary transition-colors cursor-pointer">UFPS</span><span class="text-secondary-fixed-dim">/</span><span class="hover:text-primary transition-colors cursor-pointer">Investigación</span><span class="text-secondary-fixed-dim">/</span><span class="text-on-surface font-semibold">Semilleros</span></div><div class="relative flex-1 max-w-xs ml-space-md"><span class="material-symbols-outlined absolute left-2.5 top-2.5 text-[18px] text-secondary">search</span><input class="w-full h-10 pl-8 pr-3 bg-surface rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary-container/20" placeholder="Buscar semilleros, código..." type="search"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center bg-surface-container-low p-1 rounded-lg gap-1"><span class="font-label-sm text-label-sm text-secondary px-1.5">Simular Rol:</span><button class="bg-primary-container text-on-primary font-label-sm text-label-sm px-2.5 py-1 rounded shadow-sm" type="button">ADMINISTRADOR</button><button class="text-secondary hover:text-on-surface font-label-sm text-label-sm px-2 py-1 rounded transition-colors" type="button">DIRECTOR</button><button class="text-secondary hover:text-on-surface font-label-sm text-label-sm px-2 py-1 rounded transition-colors" type="button">MIEMBRO</button></div><div class="flex items-center gap-space-sm pl-space-sm"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-sm text-label-sm text-on-surface font-semibold leading-none">admin.investigacion@ufps.edu.co</span><span class="inline-block mt-1 font-label-sm text-[10px] uppercase font-bold text-primary-container bg-error-container/60 px-1.5 py-0.5 rounded">ROLE_ADMINISTRADOR</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeZ64JJLe3cIuPzhJJbXl6CcS-MOksUGr_hbCnZNfpiSntCTpVraeZqJh9WnY9kxUkvYPH4vwJP_PTirAfJH7W6hmFpMgWFM3kDaL9r-N49Xi_p4FbnjXjys9IfT8f03L5vsGKhAsV9Tn-QBI_MnRHMsOMzyCbNnAN_TWMzpt5MSs6vLjsktSgBL5OCslUpl66Cryx3QdMjLqttm4pYIC4GY3M2hl_gNvpaHOH0Ok"/></div><button class="w-9 h-9 rounded-lg flex items-center justify-center text-secondary hover:bg-error-container hover:text-error transition-colors ml-space-xs" title="Cerrar Sesión" type="button"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg max-w-7xl mx-auto w-full flex flex-col gap-space-lg">
+<!-- Institutional Notification Banner -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-md py-space-sm rounded-xl text-on-surface shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Módulo Administrativo Restringido</span>
+<span class="font-body-sm text-body-sm text-secondary">| Autenticación federada JWT y Directorio Activo LDAP activo</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>Servicio de Autenticación: En Línea</span>
+</div>
+</div>
+<!-- Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="bg-primary/10 text-primary font-label-sm text-label-sm px-2 py-0.5 rounded font-bold uppercase tracking-wider">Control Maestro</span>
+<span class="font-label-sm text-label-sm text-secondary">/api/usuarios</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">Gestión de Usuarios, Credenciales y Roles JWT</h1>
+<p class="font-body-md text-body-md text-secondary mt-1 max-w-3xl">
+          Administración centralizada de cuentas de acceso institucional, asignación de permisos y vinculación de códigos estudiantiles.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="flex items-center gap-space-xs px-space-md h-10 rounded-lg bg-surface-container-lowest text-secondary font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all shadow-sm" id="btnSyncLdap">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Sincronizar Directorio Activo</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md h-10 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all shadow-sm" id="btnOpenModal">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>+ Crear Nueva Cuenta</span>
+</button>
+</div>
+</div>
+<!-- Metric Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Total Accounts -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider font-semibold">Total Usuarios</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">group</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline justify-between">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">128</span>
+<span class="font-label-sm text-label-sm text-secondary">cuentas registradas</span>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded font-bold">100% Activo</span>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-on-surface h-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- Administradores -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider font-semibold">Administradores</span>
+<span class="bg-error-container text-primary font-label-sm text-label-sm px-2 py-0.5 rounded font-bold uppercase tracking-wider">ROLE_ADMIN</span>
+</div>
+<div class="mt-space-md flex items-baseline justify-between">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">4</span>
+<span class="font-label-sm text-label-sm text-secondary">superusuarios</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">3.1% del total</span>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full" style="width: 3.1%"></div>
+</div>
+</div>
+<!-- Directores Docentes -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider font-semibold">Directores Docentes</span>
+<span class="bg-secondary-container text-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded font-bold uppercase tracking-wider">ROLE_DIRECTOR</span>
+</div>
+<div class="mt-space-md flex items-baseline justify-between">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-tertiary">34</span>
+<span class="font-label-sm text-label-sm text-secondary">docentes I+D+i</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">26.5% del total</span>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-tertiary-container h-full" style="width: 26.5%"></div>
+</div>
+</div>
+<!-- Miembros Estudiantes -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider font-semibold">Miembros Estudiantes</span>
+<span class="bg-amber-100 text-amber-800 font-label-sm text-label-sm px-2 py-0.5 rounded font-bold uppercase tracking-wider">ROLE_MIEMBRO</span>
+</div>
+<div class="mt-space-md flex items-baseline justify-between">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-amber-700">90</span>
+<span class="font-label-sm text-label-sm text-secondary">semilleristas</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">70.4% del total</span>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-amber-500 h-full" style="width: 70.4%"></div>
+</div>
+</div>
+</div>
+<!-- Filter and Search Bar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col md:flex-row gap-space-md items-stretch md:items-center justify-between">
+<div class="flex-1 flex flex-col sm:flex-row gap-space-sm items-center">
+<!-- Search Input -->
+<div class="relative w-full sm:w-80">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-secondary">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest shadow-sm" id="searchInput" placeholder="Buscar por nombre, correo o código..." type="text"/>
+</div>
+<!-- Role Select Filter -->
+<div class="w-full sm:w-56 relative">
+<select class="w-full h-10 pl-3 pr-8 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none appearance-none cursor-pointer shadow-sm" id="roleFilter">
+<option value="ALL">Todos los Roles (128)</option>
+<option value="ROLE_ADMINISTRADOR">Administrador (4)</option>
+<option value="ROLE_DIRECTOR">Director Docente (34)</option>
+<option value="ROLE_MIEMBRO">Miembro Estudiante (90)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[20px] text-secondary pointer-events-none">expand_more</span>
+</div>
+<!-- Status Filter -->
+<div class="w-full sm:w-44 relative">
+<select class="w-full h-10 pl-3 pr-8 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none appearance-none cursor-pointer shadow-sm" id="statusFilter">
+<option value="ALL">Estado: Todos</option>
+<option value="ACTIVO">Activos (128)</option>
+<option value="INACTIVO">Inactivos (0)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[20px] text-secondary pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Action Tools -->
+<div class="flex items-center gap-space-xs justify-end">
+<button class="h-10 px-space-md rounded-lg bg-surface font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1 shadow-sm" title="Descargar CSV / Exportar Nómina">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span class="hidden sm:inline">Exportar CSV</span>
+</button>
+<button class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-secondary hover:text-on-surface hover:bg-surface-container transition-colors shadow-sm" id="btnResetFilters" title="Limpiar Filtros">
+<span class="material-symbols-outlined text-[20px]">filter_alt_off</span>
+</button>
+</div>
+</div>
+<!-- Users Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm tracking-wider uppercase">
+<th class="py-3 px-4 font-bold">ID</th>
+<th class="py-3 px-4 font-bold">Usuario / Nombre Completo</th>
+<th class="py-3 px-4 font-bold">Correo Institucional</th>
+<th class="py-3 px-4 font-bold">Cód. Estudiantil</th>
+<th class="py-3 px-4 font-bold">Rol Asignado</th>
+<th class="py-3 px-4 font-bold text-center">Estado</th>
+<th class="py-3 px-4 font-bold text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low text-on-surface font-body-sm text-body-sm" id="usersTableBody">
+<!-- Row 1: Carlos Julio -->
+<tr class="hover:bg-surface-container-low/50 transition-colors" data-role="ROLE_ADMINISTRADOR" data-user="carlos julio hernandez admin.investigacion@ufps.edu.co">
+<td class="py-3.5 px-4 font-label-md text-label-md text-secondary font-mono">#01</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-label-md">
+                    CH
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Ing. Carlos Julio Hernández</span>
+<span class="font-label-sm text-label-sm text-secondary">Dirección Central de Investigaciones</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 font-mono text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">mail</span>
+<span class="text-on-surface">admin.investigacion@ufps.edu.co</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono text-secondary">
+<span class="px-2 py-0.5 rounded bg-surface text-secondary-fixed-dim font-bold">—</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 bg-error-container text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  ADMINISTRADOR
+                </span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 bg-emerald-100 text-emerald-800 font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" title="Editar Credenciales">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded text-error hover:bg-error-container/50 transition-colors" title="Bloquear Acceso">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: María Elena Rodríguez -->
+<tr class="hover:bg-surface-container-low/50 transition-colors" data-role="ROLE_DIRECTOR" data-user="maria elena rodriguez doc.rodriguez@ufps.edu.co">
+<td class="py-3.5 px-4 font-label-md text-label-md text-secondary font-mono">#02</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-tertiary flex items-center justify-center font-bold text-label-md">
+                    MR
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Dra. María Elena Rodríguez</span>
+<span class="font-label-sm text-label-sm text-secondary">Semillero GISIC • Dpto. Sistemas</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 font-mono text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">mail</span>
+<span class="text-on-surface">doc.rodriguez@ufps.edu.co</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono text-secondary">
+<span class="px-2 py-0.5 rounded bg-surface text-secondary-fixed-dim font-bold">—</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 bg-secondary-container text-tertiary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  DIRECTOR
+                </span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 bg-emerald-100 text-emerald-800 font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" title="Editar Credenciales">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded text-tertiary hover:bg-secondary-container/50 transition-colors" title="Reasignar Semilleros">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Julián David Martínez -->
+<tr class="hover:bg-surface-container-low/50 transition-colors" data-role="ROLE_MIEMBRO" data-user="julian david martinez julian.martinez@ufps.edu.co 2026901">
+<td class="py-3.5 px-4 font-label-md text-label-md text-secondary font-mono">#03</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-label-md">
+                    JM
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Julián David Martínez</span>
+<span class="font-label-sm text-label-sm text-secondary">Ingeniería de Sistemas • Líder Estudiantil</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 font-mono text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">mail</span>
+<span class="text-on-surface">julian.martinez@ufps.edu.co</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold text-label-sm">2026901</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 bg-amber-100 text-amber-800 font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  MIEMBRO
+                </span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 bg-emerald-100 text-emerald-800 font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" title="Editar Credenciales">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" title="Historial y Proyectos">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Valeria Sofía Durán -->
+<tr class="hover:bg-surface-container-low/50 transition-colors" data-role="ROLE_MIEMBRO" data-user="valeria sofia duran valeria.duran@ufps.edu.co 2026945">
+<td class="py-3.5 px-4 font-label-md text-label-md text-secondary font-mono">#04</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-label-md">
+                    VD
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Valeria Sofía Durán</span>
+<span class="font-label-sm text-label-sm text-secondary">Ingeniería Industrial • Investigadora Junior</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 font-mono text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">mail</span>
+<span class="text-on-surface">valeria.duran@ufps.edu.co</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold text-label-sm">2026945</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 bg-amber-100 text-amber-800 font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  MIEMBRO
+                </span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 bg-emerald-100 text-emerald-800 font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" title="Editar Credenciales">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" title="Historial y Proyectos">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Dr. Carlos Alberto Mendoza -->
+<tr class="hover:bg-surface-container-low/50 transition-colors" data-role="ROLE_DIRECTOR" data-user="carlos alberto mendoza carlos.mendoza@ufps.edu.co">
+<td class="py-3.5 px-4 font-label-md text-label-md text-secondary font-mono">#05</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-tertiary flex items-center justify-center font-bold text-label-md">
+                    CM
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Dr. Carlos Alberto Mendoza</span>
+<span class="font-label-sm text-label-sm text-secondary">Semillero BIO-UFPS • Dpto. Química</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 font-mono text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">mail</span>
+<span class="text-on-surface">carlos.mendoza@ufps.edu.co</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono text-secondary">
+<span class="px-2 py-0.5 rounded bg-surface text-secondary-fixed-dim font-bold">—</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 bg-secondary-container text-tertiary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  DIRECTOR
+                </span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 bg-emerald-100 text-emerald-800 font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" title="Editar Credenciales">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded text-tertiary hover:bg-secondary-container/50 transition-colors" title="Reasignar Semilleros">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Record count Footer -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-secondary">
+<div>
+          Mostrando <span class="font-bold text-on-surface">1 - 5</span> de <span class="font-bold text-on-surface">128</span> cuentas registradas
+        </div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded flex items-center justify-center hover:bg-surface-container text-secondary transition-colors" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary-container text-on-primary font-bold text-label-sm">1</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-secondary font-bold text-label-sm transition-colors">2</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-secondary font-bold text-label-sm transition-colors">3</button>
+<span class="px-1 text-secondary">...</span>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-secondary font-bold text-label-sm transition-colors">26</button>
+<button class="w-8 h-8 rounded flex items-center justify-center hover:bg-surface-container text-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Security & JWT Policies Briefing -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Cifrado de Llave Asimétrica</span>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Los tokens de sesión utilizan JWT con algoritmo RS256 e invalidación instantánea tras cambio de rol.</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[24px]">corporate_fare</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Validación de Dominio UFPS</span>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Exclusividad estricta para correos `@ufps.edu.co` sincronizados contra el servidor de identidades institucional.</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-amber-700 text-[24px]">badge</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Integridad Académica</span>
+<p class="font-body-sm text-body-sm text-secondary mt-1">El código de estudiante enlaza directamente con la base de datos de matrículas activas de la vicerrectoría.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Modal: Crear Nueva Cuenta de Usuario -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-sm p-4 hidden" id="modalUserCreate">
+<div class="bg-surface-container-lowest w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[942px] animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">person_add</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface leading-tight">Registrar Usuario en Plataforma UFPS</h2>
+<span class="font-label-sm text-label-sm text-secondary">Endpoint de aprovisionamiento: POST /api/usuarios</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" id="btnCloseModal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body (Form) -->
+<form class="p-space-lg overflow-y-auto flex flex-col gap-space-md" id="createUserForm" onsubmit="event.preventDefault();">
+<!-- Campo: Nombre Completo -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1" for="fullName">
+<span>Nombre Completo Institucional</span>
+<span class="text-primary font-bold">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-secondary">badge</span>
+<input class="w-full h-10 pl-10 pr-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary-container/20 shadow-sm" id="fullName" placeholder="ej. Andrés Camilo Rojas Peñaranda" required="" type="text"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Tal como figura en el documento de identidad o carné universitario.</span>
+</div>
+<!-- Campo: Correo Institucional -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1" for="userEmail">
+<span>Correo Institucional (@ufps.edu.co)</span>
+<span class="text-primary font-bold">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-secondary">alternate_email</span>
+<input class="w-full h-10 pl-10 pr-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary-container/20 shadow-sm" id="userEmail" pattern="[a-zA-Z0-9._%+-]+@ufps\.edu\.co$" placeholder="andres.rojas@ufps.edu.co" required="" type="email"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary" id="emailHelper">Debe coincidir obligatoriamente con el dominio corporativo @ufps.edu.co</span>
+</div>
+<!-- Campo: Contraseña Temporal -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="tempPassword">
+<span class="flex items-center gap-1">
+              Contraseña Temporal
+              <span class="text-primary font-bold">*</span>
+</span>
+<button class="text-tertiary font-label-sm text-label-sm hover:underline flex items-center gap-0.5" id="btnGenPass" type="button">
+<span class="material-symbols-outlined text-[14px]">autorenew</span>
+              Generar Segura
+            </button>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-secondary">lock_reset</span>
+<input class="w-full h-10 pl-10 pr-10 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary-container/20 shadow-sm" id="tempPassword" maxlength="72" minlength="8" placeholder="Mínimo 8 caracteres (cifrado bcrypt)" required="" type="password"/>
+<button class="absolute right-2.5 top-2 text-secondary hover:text-on-surface p-1" id="btnTogglePass" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+<!-- Password Strength Indicator -->
+<div class="flex flex-col gap-1 mt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Fortaleza de contraseña:</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary" id="passStrengthLabel">Esperando caracteres...</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary transition-all duration-300" id="passBar" style="width: 0%"></div>
+</div>
+<span class="font-label-sm text-[11px] text-secondary">La contraseña será hasheada en backend vía bcrypt con factor de costo 12.</span>
+</div>
+</div>
+<!-- Campo: Selección de Rol (Radio Cards) -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span>Rol y Privilegios en el Sistema</span>
+<span class="text-primary font-bold">*</span>
+</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm" id="roleSelectorGroup">
+<!-- ROLE_MIEMBRO (Default) -->
+<label class="relative flex flex-col p-3 rounded-xl bg-surface hover:bg-surface-container-low cursor-pointer transition-all role-card selected shadow-sm" data-role="ROLE_MIEMBRO">
+<input checked="" class="sr-only" name="selectedRole" type="radio" value="ROLE_MIEMBRO"/>
+<div class="flex items-center justify-between mb-1.5">
+<span class="bg-amber-100 text-amber-800 font-label-sm text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">ROLE_MIEMBRO</span>
+<span class="material-symbols-outlined text-amber-600 text-[18px] role-check">check_circle</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Miembro</span>
+<span class="font-body-sm text-[11px] text-secondary mt-0.5 leading-snug">Estudiante vinculado a proyectos y actividades de semilleros.</span>
+</label>
+<!-- ROLE_DIRECTOR -->
+<label class="relative flex flex-col p-3 rounded-xl bg-surface hover:bg-surface-container-low cursor-pointer transition-all role-card shadow-sm" data-role="ROLE_DIRECTOR">
+<input class="sr-only" name="selectedRole" type="radio" value="ROLE_DIRECTOR"/>
+<div class="flex items-center justify-between mb-1.5">
+<span class="bg-secondary-container text-tertiary font-label-sm text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">ROLE_DIRECTOR</span>
+<span class="material-symbols-outlined text-secondary text-[18px] role-check opacity-20">check_circle</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Director</span>
+<span class="font-body-sm text-[11px] text-secondary mt-0.5 leading-snug">Docente líder. Gestiona semilleros, planes e inscripciones.</span>
+</label>
+<!-- ROLE_ADMINISTRADOR -->
+<label class="relative flex flex-col p-3 rounded-xl bg-surface hover:bg-surface-container-low cursor-pointer transition-all role-card shadow-sm" data-role="ROLE_ADMINISTRADOR">
+<input class="sr-only" name="selectedRole" type="radio" value="ROLE_ADMINISTRADOR"/>
+<div class="flex items-center justify-between mb-1.5">
+<span class="bg-error-container text-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">ROLE_ADMIN</span>
+<span class="material-symbols-outlined text-secondary text-[18px] role-check opacity-20">check_circle</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Administrador</span>
+<span class="font-body-sm text-[11px] text-secondary mt-0.5 leading-snug">Acceso global total, auditoría, parámetros y gestión de usuarios.</span>
+</label>
+</div>
+</div>
+<!-- Campo Dinámico Condicional: Código Estudiantil -->
+<div class="flex flex-col gap-1 transition-all" id="studentCodeContainer">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="studentCode">
+<span class="flex items-center gap-1">
+              Código Estudiantil
+              <span class="text-primary font-bold" id="codeRequiredStar">*</span>
+</span>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm" title="Requerido únicamente para estudiantes vinculados">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Requisito según rol</span>
+</div>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-secondary">pin</span>
+<input class="w-full h-10 pl-10 pr-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary-container/20 shadow-sm" id="studentCode" maxlength="7" pattern="^[0-9]{7}$" placeholder="ej. 2026901 (7 dígitos numéricos)" type="text"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary" id="studentCodeNotice">
+            Obligatorio únicamente para el rol <strong>MIEMBRO</strong> (ej. 2026901). Para Administradores y Directores permanece deshabilitado.
+          </span>
+</div>
+<!-- Checkbox: Enviar credenciales -->
+<div class="p-space-sm rounded-lg bg-surface flex items-center gap-space-sm cursor-pointer mt-1">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-primary cursor-pointer" id="sendEmailNotice" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface cursor-pointer select-none" for="sendEmailNotice">
+            Enviar credenciales provisionales e instrucciones de acceso por correo institucional.
+          </label>
+</div>
+</form>
+<!-- Modal Footer -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<button class="px-space-md h-10 rounded-lg bg-surface font-label-lg text-label-lg text-secondary hover:text-on-surface hover:bg-surface-container transition-colors shadow-sm" id="btnCancelModal" type="button">
+          Cancelar
+        </button>
+<button class="px-space-lg h-10 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all flex items-center gap-space-xs shadow-sm" id="btnSubmitUser" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Guardar y Crear Usuario</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Toast de Notificación Dinámico -->
+<div class="fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-xl shadow-2xl flex items-center gap-space-sm transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification">
+<span class="material-symbols-outlined text-emerald-400" id="toastIcon">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold" id="toastTitle">Operación completada</span>
+<span class="font-body-sm text-body-sm text-secondary-fixed-dim" id="toastMsg">El usuario fue registrado con éxito.</span>
+</div>
+</div>
+</div>
+<script>
+  // UI Interactive Handlers
+  (function initUserManager() {
+    const modal = document.getElementById('modalUserCreate');
+    const btnOpen = document.getElementById('btnOpenModal');
+    const btnClose = document.getElementById('btnCloseModal');
+    const btnCancel = document.getElementById('btnCancelModal');
+    const btnSubmit = document.getElementById('btnSubmitUser');
+    const btnSync = document.getElementById('btnSyncLdap');
+    const toast = document.getElementById('toastNotification');
+    const toastTitle = document.getElementById('toastTitle');
+    const toastMsg = document.getElementById('toastMsg');
+    const toastIcon = document.getElementById('toastIcon');
+
+    // Role Selection Logic & Conditional Student Code Field
+    const roleCards = document.querySelectorAll('.role-card');
+    const studentCodeInput = document.getElementById('studentCode');
+    const codeRequiredStar = document.getElementById('codeRequiredStar');
+    const studentCodeNotice = document.getElementById('studentCodeNotice');
+
+    function updateStudentCodeState(role) {
+      if (role === 'ROLE_MIEMBRO') {
+        studentCodeInput.disabled = false;
+        studentCodeInput.classList.remove('opacity-50', 'bg-surface-container-high', 'cursor-not-allowed');
+        studentCodeInput.classList.add('bg-surface');
+        studentCodeInput.placeholder = 'ej. 2026901 (7 dígitos numéricos)';
+        codeRequiredStar.classList.remove('hidden');
+        studentCodeNotice.innerHTML = 'Obligatorio para estudiantes vinculados (ej. 2026901).';
+      } else {
+        studentCodeInput.disabled = true;
+        studentCodeInput.value = '';
+        studentCodeInput.classList.add('opacity-50', 'bg-surface-container-high', 'cursor-not-allowed');
+        studentCodeInput.classList.remove('bg-surface');
+        studentCodeInput.placeholder = 'No aplicable para Directores o Administradores';
+        codeRequiredStar.classList.add('hidden');
+        studentCodeNotice.innerHTML = 'Campo deshabilitado para ' + (role === 'ROLE_DIRECTOR' ? 'Directores' : 'Administradores') + '.';
+      }
+    }
+
+    roleCards.forEach(card => {
+      card.addEventListener('click', () => {
+        roleCards.forEach(c => {
+          c.classList.remove('selected', 'bg-surface-container-low');
+          const chk = c.querySelector('.role-check');
+          if (chk) chk.classList.add('opacity-20');
+        });
+        card.classList.add('selected', 'bg-surface-container-low');
+        const activeCheck = card.querySelector('.role-check');
+        if (activeCheck) activeCheck.classList.remove('opacity-20');
+        
+        const radio = card.querySelector('input[type="radio"]');
+        if (radio) {
+          radio.checked = true;
+          updateStudentCodeState(radio.value);
+        }
+      });
+    });
+
+    // Toggle Modal
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      // Default reset state for student code
+      updateStudentCodeState('ROLE_MIEMBRO');
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      document.getElementById('createUserForm').reset();
+      updatePassStrength('');
+    }
+
+    btnOpen.addEventListener('click', openModal);
+    btnClose.addEventListener('click', closeModal);
+    btnCancel.addEventListener('click', closeModal);
+
+    // Password Toggle & Generator
+    const passInput = document.getElementById('tempPassword');
+    const btnTogglePass = document.getElementById('btnTogglePass');
+    const btnGenPass = document.getElementById('btnGenPass');
+    const passStrengthLabel = document.getElementById('passStrengthLabel');
+    const passBar = document.getElementById('passBar');
+
+    btnTogglePass.addEventListener('click', () => {
+      const type = passInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passInput.setAttribute('type', type);
+      const icon = btnTogglePass.querySelector('.material-symbols-outlined');
+      icon.textContent = type === 'password' ? 'visibility' : 'visibility_off';
+    });
+
+    function updatePassStrength(val) {
+      if (!val) {
+        passBar.style.width = '0%';
+        passBar.className = 'h-full bg-secondary transition-all duration-300';
+        passStrengthLabel.textContent = 'Esperando caracteres...';
+        passStrengthLabel.className = 'font-label-sm text-label-sm font-semibold text-secondary';
+        return;
+      }
+      if (val.length < 8) {
+        passBar.style.width = '25%';
+        passBar.className = 'h-full bg-error transition-all duration-300';
+        passStrengthLabel.textContent = 'Débil (< 8 car.)';
+        passStrengthLabel.className = 'font-label-sm text-label-sm font-semibold text-error';
+      } else if (val.length < 12) {
+        passBar.style.width = '65%';
+        passBar.className = 'h-full bg-amber-500 transition-all duration-300';
+        passStrengthLabel.textContent = 'Media (Aceptable)';
+        passStrengthLabel.className = 'font-label-sm text-label-sm font-semibold text-amber-600';
+      } else {
+        passBar.style.width = '100%';
+        passBar.className = 'h-full bg-emerald-500 transition-all duration-300';
+        passStrengthLabel.textContent = 'Fuerte (Óptima bcrypt)';
+        passStrengthLabel.className = 'font-label-sm text-label-sm font-semibold text-emerald-600';
+      }
+    }
+
+    passInput.addEventListener('input', (e) => updatePassStrength(e.target.value));
+
+    btnGenPass.addEventListener('click', () => {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%&*';
+      let result = '';
+      for (let i = 0; i < 14; i++) {
+        result += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      passInput.value = result;
+      passInput.setAttribute('type', 'text');
+      const icon = btnTogglePass.querySelector('.material-symbols-outlined');
+      icon.textContent = 'visibility_off';
+      updatePassStrength(result);
+    });
+
+    // Toast Trigger
+    function showToast(title, message, isError = false) {
+      toastTitle.textContent = title;
+      toastMsg.textContent = message;
+      if (isError) {
+        toastIcon.textContent = 'error';
+        toastIcon.className = 'material-symbols-outlined text-error';
+      } else {
+        toastIcon.textContent = 'check_circle';
+        toastIcon.className = 'material-symbols-outlined text-emerald-400';
+      }
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 4000);
+    }
+
+    // Submit Validation & Handler
+    btnSubmit.addEventListener('click', () => {
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('userEmail').value.trim();
+      const pass = passInput.value;
+      const selectedRole = document.querySelector('input[name="selectedRole"]:checked').value;
+      const code = studentCodeInput.value.trim();
+
+      if (!name) {
+        showToast('Validación UFPS', 'Por favor complete el nombre institucional completo.', true);
+        return;
+      }
+      if (!email || !email.endsWith('@ufps.edu.co')) {
+        showToast('Dominio Inválido', 'El correo debe terminar estrictamente en @ufps.edu.co', true);
+        return;
+      }
+      if (!pass || pass.length < 8) {
+        showToast('Seguridad Insuficiente', 'La contraseña provisional debe poseer mínimo 8 caracteres.', true);
+        return;
+      }
+      if (selectedRole === 'ROLE_MIEMBRO' && (!code || code.length !== 7 || isNaN(code))) {
+        showToast('Código Obligatorio', 'Para el rol MIEMBRO, ingrese un código estudiantil de 7 dígitos numéricos.', true);
+        return;
+      }
+
+      // Add to table dynamically
+      const tableBody = document.getElementById('usersTableBody');
+      const newRow = document.createElement('tr');
+      newRow.className = 'hover:bg-surface-container-low/50 transition-colors animate-in fade-in duration-300';
+      newRow.setAttribute('data-role', selectedRole);
+      newRow.setAttribute('data-user', (name + ' ' + email + ' ' + code).toLowerCase());
+
+      const initials = name.split(' ').map(n => n[0]).slice(0, 2).join('').toUpperCase();
+      let roleBadge = '';
+      if (selectedRole === 'ROLE_ADMINISTRADOR') {
+        roleBadge = '<span class="inline-flex items-center gap-1 bg-error-container text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>ADMINISTRADOR</span>';
+      } else if (selectedRole === 'ROLE_DIRECTOR') {
+        roleBadge = '<span class="inline-flex items-center gap-1 bg-secondary-container text-tertiary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>DIRECTOR</span>';
+      } else {
+        roleBadge = '<span class="inline-flex items-center gap-1 bg-amber-100 text-amber-800 font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>MIEMBRO</span>';
+      }
+
+      const codeBadge = (selectedRole === 'ROLE_MIEMBRO' && code)
+        ? `<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold text-label-sm">${code}</span>`
+        : `<span class="px-2 py-0.5 rounded bg-surface text-secondary-fixed-dim font-bold">—</span>`;
+
+      newRow.innerHTML = `
+        <td class="py-3.5 px-4 font-label-md text-label-md text-secondary font-mono">#NEW</td>
+        <td class="py-3.5 px-4">
+          <div class="flex items-center gap-space-sm">
+            <div class="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-label-md">
+              ${initials}
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-lg text-label-lg font-semibold text-on-surface">${name}</span>
+              <span class="font-label-sm text-label-sm text-secondary">Aprovisionamiento Manual • Reciente</span>
+            </div>
+          </div>
+        </td>
+        <td class="py-3.5 px-4">
+          <div class="flex items-center gap-1.5 font-mono text-label-md">
+            <span class="material-symbols-outlined text-[16px] text-secondary">mail</span>
+            <span class="text-on-surface">${email}</span>
+          </div>
+        </td>
+        <td class="py-3.5 px-4 font-mono">${codeBadge}</td>
+        <td class="py-3.5 px-4">${roleBadge}</td>
+        <td class="py-3.5 px-4 text-center">
+          <span class="inline-flex items-center gap-1 bg-emerald-100 text-emerald-800 font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            Activo
+          </span>
+        </td>
+        <td class="py-3.5 px-4 text-right">
+          <div class="flex items-center justify-end gap-1">
+            <button title="Editar Credenciales" class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container transition-colors">
+              <span class="material-symbols-outlined text-[18px]">edit</span>
+            </button>
+            <button title="Bloquear Acceso" class="p-1.5 rounded text-error hover:bg-error-container/50 transition-colors">
+              <span class="material-symbols-outlined text-[18px]">lock</span>
+            </button>
+          </div>
+        </td>
+      `;
+
+      tableBody.prepend(newRow);
+      closeModal();
+      showToast('Usuario Creado Exitosamente', `Cuenta aprovisionada para ${name} con rol ${selectedRole}.`);
+    });
+
+    // LDAP Sync Trigger
+    btnSync.addEventListener('click', () => {
+      btnSync.classList.add('opacity-60', 'pointer-events-none');
+      const icon = btnSync.querySelector('.material-symbols-outlined');
+      icon.classList.add('animate-spin');
+      setTimeout(() => {
+        btnSync.classList.remove('opacity-60', 'pointer-events-none');
+        icon.classList.remove('animate-spin');
+        showToast('Directorio Activo UFPS', 'Sincronización LDAP completada. 128 cuentas verificadas contra el servidor central.');
+      }, 1200);
+    });
+
+    // Live Filtering (Search + Role Dropdown)
+    const searchInput = document.getElementById('searchInput');
+    const roleFilter = document.getElementById('roleFilter');
+    const btnReset = document.getElementById('btnResetFilters');
+
+    function applyFilter() {
+      const q = searchInput.value.toLowerCase().trim();
+      const r = roleFilter.value;
+      const rows = document.querySelectorAll('#usersTableBody tr');
+
+      rows.forEach(row => {
+        const text = row.getAttribute('data-user') || '';
+        const role = row.getAttribute('data-role') || '';
+
+        const matchesText = !q || text.includes(q);
+        const matchesRole = (r === 'ALL') || (role === r);
+
+        if (matchesText && matchesRole) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', applyFilter);
+    roleFilter.addEventListener('change', applyFilter);
+
+    btnReset.addEventListener('click', () => {
+      searchInput.value = '';
+      roleFilter.value = 'ALL';
+      document.getElementById('statusFilter').value = 'ALL';
+      applyFilter();
+    });
+
+  })();
+</script></main></div></body></html>

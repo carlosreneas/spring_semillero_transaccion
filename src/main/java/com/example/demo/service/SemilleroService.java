@@ -90,14 +90,16 @@ public class SemilleroService {
         // 4. R6: Verificar que haya exactamente un líder
         long totalLideres = integrantesReq.stream().filter(IntegranteRequest::esLider).count();
         if (totalLideres != 1) {
-            throw new ReglaNegocioException("Debe existir exactamente un integrante con rol de líder. Líderes encontrados: " + totalLideres);
+            throw new ReglaNegocioException(
+                    "Debe existir exactamente un integrante con rol de líder. Líderes encontrados: " + totalLideres);
         }
 
         // 5. R5: Verificar que no se repitan códigos dentro del semillero
         Set<String> codigos = new HashSet<>();
         for (IntegranteRequest integranteReq : integrantesReq) {
             if (!codigos.add(integranteReq.codigo().trim())) {
-                throw new ReglaNegocioException("No se permiten códigos estudiantiles repetidos en el semillero: " + integranteReq.codigo());
+                throw new ReglaNegocioException(
+                        "No se permiten códigos estudiantiles repetidos en el semillero: " + integranteReq.codigo());
             }
         }
 
@@ -178,26 +180,25 @@ public class SemilleroService {
         );
     }
 
-    @Transactional(readOnly = true)                                         // NUEVO
+    @Transactional(readOnly = true) // NUEVO
     public List<SemilleroResponse> listar() {
         return semilleroRepository.findAll().stream().map(this::toResponse).toList();
     }
 
-    @Transactional(readOnly = true)                                         // NUEVO
+    @Transactional(readOnly = true) // NUEVO
     public SemilleroResponse obtener(Long id) {
         return semilleroRepository.findById(id).map(this::toResponse)
-            .orElseThrow(() -> new RecursoNoEncontradoException("Semillero no encontrado: " + id));
+                .orElseThrow(() -> new RecursoNoEncontradoException("Semillero no encontrado: " + id));
     }
 
-    @Transactional(readOnly = true)                                         // NUEVO
+    @Transactional(readOnly = true) // NUEVO
     public List<SemilleroResponse> mios(Authentication auth) {
         Set<Semillero> resultado = new LinkedHashSet<>();
         if (acceso.tieneRol(auth, "DIRECTOR")) {
             resultado.addAll(semilleroRepository.findByDirectorCorreoIgnoreCase(auth.getName()));
         }
         if (acceso.tieneRol(auth, "MIEMBRO")) {
-            acceso.codigoDe(auth).ifPresent(c ->
-                resultado.addAll(integranteRepository.findSemillerosPorCodigo(c)));
+            acceso.codigoDe(auth).ifPresent(c -> resultado.addAll(integranteRepository.findSemillerosPorCodigo(c)));
         }
         return resultado.stream().map(this::toResponse).toList();
     }

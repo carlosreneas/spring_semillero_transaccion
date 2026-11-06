@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed-dim":"#bcc7de","on-error":"#ffffff","surface-container-low":"#eff4ff","surface-dim":"#cbdbf5","outline":"#906f6e","surface-container-high":"#dce9ff","error-container":"#ffdad6","inverse-primary":"#ffb3b1","on-tertiary-fixed":"#00174b","primary":"#9e001f","on-primary-fixed-variant":"#92001c","surface-bright":"#f8f9ff","on-primary":"#ffffff","surface-tint":"#bf0229","primary-fixed":"#ffdad8","background":"#f8f9ff","on-secondary-fixed-variant":"#3c475a","tertiary-fixed":"#dbe1ff","on-tertiary-container":"#dae1ff","on-primary-fixed":"#410007","on-secondary-container":"#586377","on-tertiary":"#ffffff","inverse-surface":"#213145","tertiary-fixed-dim":"#b4c5ff","surface-container":"#e5eeff","inverse-on-surface":"#eaf1ff","surface-variant":"#d3e4fe","on-surface":"#0b1c30","primary-container":"#c8102e","surface-container-highest":"#d3e4fe","secondary":"#545f73","surface-container-lowest":"#ffffff","outline-variant":"#e5bdbb","surface":"#f8f9ff","tertiary-container":"#1259e2","secondary-container":"#d5e0f8","on-tertiary-fixed-variant":"#003ea8","on-error-container":"#93000a","tertiary":"#0043b4","secondary-fixed":"#d8e3fb","on-secondary-fixed":"#111c2d","on-secondary":"#ffffff","on-background":"#0b1c30","primary-fixed-dim":"#ffb3b1","on-surface-variant":"#5c403f","on-primary-container":"#ffdad8","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","space-lg":"1.5rem","margin":"2rem","gutter-mobile":"1rem","space-xl":"2rem","space-md":"1rem","margin-mobile":"1rem"},"fontFamily":{"body-lg":["Inter"],"display":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display":["36px",{"lineHeight":"44px","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-inverse-surface/90"><img alt="Logo UFPS Investigación" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwVf3O-zxqkJUT1_xbYdJsq2pHY1fiJuCUlyote5mWHKJDG0BQzFQGNKpvJZZEi5Kumu9dSnXLQ1MAcRrZ1FCvkizu8MtLEwFyvO3b31Ob6k5mDcDvWxmPnAQv72gtDmVxQvR49EbkZzUCKksiOG-EccES2AgNUxom4x0aIMnnQijgGruiXw1v7dUcbl3T9d2jti3lCH14QXxZ1LqEQTy8c94KrhNkHU_fQl1Btww"/><div class="flex flex-col leading-tight"><span class="font-headline-sm text-headline-sm text-surface-container-lowest font-bold tracking-tight">UFPS</span><span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-wider">Semilleros I+D+i</span></div></div><div class="px-space-md py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim px-space-xs">Módulos de Gestión</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-lg border-l-4 border-primary-fixed"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="semilleros" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span>Semilleros</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="mis-semilleros" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span>Mis Semilleros</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="registrar-semillero" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>Registrar Semillero</span></div><span class="bg-primary-container text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded-full">ADMIN</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="usuarios-y-roles" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Usuarios y Roles</span></a></nav></div><div class="flex flex-col pb-space-md px-space-sm"><div class="px-space-md py-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim px-space-xs">Ayuda y Soporte</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-variant/30 text-surface-container-lowest"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="documentacion" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>Documentación / Guía UFPS</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="soporte-tecnico" href="#"><span class="material-symbols-outlined text-[18px]">headset_mic</span><span>Soporte Técnico</span></a></nav></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-xs font-label-md text-label-md text-secondary"><span class="hover:text-primary transition-colors cursor-pointer">UFPS</span><span class="text-secondary-fixed-dim">/</span><span class="hover:text-primary transition-colors cursor-pointer">Investigación</span><span class="text-secondary-fixed-dim">/</span><span class="text-on-surface font-semibold">Semilleros</span></div><div class="relative flex-1 max-w-xs ml-space-md"><span class="material-symbols-outlined absolute left-2.5 top-2.5 text-[18px] text-secondary">search</span><input class="w-full h-10 pl-8 pr-3 bg-surface rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary-container/20" placeholder="Buscar semilleros, código..." type="search"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center bg-surface-container-low p-1 rounded-lg gap-1"><span class="font-label-sm text-label-sm text-secondary px-1.5">Simular Rol:</span><button class="bg-primary-container text-on-primary font-label-sm text-label-sm px-2.5 py-1 rounded shadow-sm" type="button">ADMINISTRADOR</button><button class="text-secondary hover:text-on-surface font-label-sm text-label-sm px-2 py-1 rounded transition-colors" type="button">DIRECTOR</button><button class="text-secondary hover:text-on-surface font-label-sm text-label-sm px-2 py-1 rounded transition-colors" type="button">MIEMBRO</button></div><div class="flex items-center gap-space-sm pl-space-sm"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-sm text-label-sm text-on-surface font-semibold leading-none">admin.investigacion@ufps.edu.co</span><span class="inline-block mt-1 font-label-sm text-[10px] uppercase font-bold text-primary-container bg-error-container/60 px-1.5 py-0.5 rounded">ROLE_ADMINISTRADOR</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeZ64JJLe3cIuPzhJJbXl6CcS-MOksUGr_hbCnZNfpiSntCTpVraeZqJh9WnY9kxUkvYPH4vwJP_PTirAfJH7W6hmFpMgWFM3kDaL9r-N49Xi_p4FbnjXjys9IfT8f03L5vsGKhAsV9Tn-QBI_MnRHMsOMzyCbNnAN_TWMzpt5MSs6vLjsktSgBL5OCslUpl66Cryx3QdMjLqttm4pYIC4GY3M2hl_gNvpaHOH0Ok"/></div><button class="w-9 h-9 rounded-lg flex items-center justify-center text-secondary hover:bg-error-container hover:text-error transition-colors ml-space-xs" title="Cerrar Sesión" type="button"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg space-y-space-lg max-w-[1580px] mx-auto w-full">
+<!-- 1. BANNER DE SESIÓN JWT & ÁMBITO DE ACCESO -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md sm:p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Usuario activo -->
+<div class="flex items-start sm:items-center gap-space-md">
+<div class="relative">
+<img class="w-14 h-14 rounded-xl object-cover shadow-sm" data-alt="Institutional profile portrait of Dra Maria Elena Rodriguez, professor of computer engineering at UFPS, in a modern academic office setting, crisp directional light, professional attire with subtle deep red collar pin, editorial photorealistic academic style." id="user-avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMY-Ui7X14dPodmEudJcZhN-T33W-sQYAQIGHrNVsoZid8NOtWsOf_k_YAO2wWnKWKbEvGD-uTbJ8SJad6cfq6H-5VU4KIK9w0wqn2UoKCN4yhTqXVtTlaZgZzB5PMT5FR_BTviKOj69v1dqk7mPt9QOpySK840BDRJlyTI1AZAStWbOwpWIjJSRVty9ggXw23IuPNm9iIPyJGRYDsgBYZEzyjfUCynbFniWL_lM0"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-[#16A34A] ring-2 ring-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-surface-container-lowest">check</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs">
+<h1 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight" id="user-display-name">
+                Dra. María Elena Rodríguez
+              </h1>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-semibold tracking-wide" id="user-role-badge">
+                DIRECTOR DOCENTE
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary">
+                Dpto. Sistemas e Informática
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary flex items-center gap-1.5 mt-0.5" id="user-display-email">
+<span class="material-symbols-outlined text-[16px]">alternate_email</span>
+              doc.rodriguez@ufps.edu.co
+              <span class="text-secondary-fixed-dim">|</span>
+<span>Cód. Nómina: 40992-UFPS</span>
+</p>
+</div>
+</div>
+<!-- Acciones de perfil / Alternador interactivo -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm bg-surface-container-low p-1.5 rounded-xl">
+<div class="flex items-center gap-2 px-2.5 py-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Contexto JWT:</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary font-semibold shadow-sm transition-all text-left flex items-center gap-1.5" id="btn-switch-director" onclick="switchProfile('director')" type="button">
+<span class="material-symbols-outlined text-[16px]">school</span>
+            Docente Directora
+          </button>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container transition-all text-left flex items-center gap-1.5" id="btn-switch-member" onclick="switchProfile('member')" type="button">
+<span class="material-symbols-outlined text-[16px]">badge</span>
+            Estudiante Miembro
+          </button>
+</div>
+</div>
+<!-- Detalle técnico JWT token e info criptográfica -->
+<div class="bg-surface-container-low rounded-lg p-space-sm sm:px-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-secondary">
+<span class="flex items-center gap-1 text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-[#16A34A] animate-pulse"></span>
+            Token RS256 Cifrado
+          </span>
+<span class="text-secondary-fixed-dim hidden sm:inline">•</span>
+<span id="jwt-claims-meta">Sub: <strong class="text-on-surface font-medium">doc.rodriguez@ufps.edu.co</strong></span>
+<span class="text-secondary-fixed-dim hidden sm:inline">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">schedule</span>
+            Vigencia: <span class="font-medium text-on-surface">03h 42m restantes</span>
+</span>
+<span class="text-secondary-fixed-dim hidden sm:inline">•</span>
+<span class="truncate max-w-xs xl:max-w-md font-mono text-[11px] text-secondary">
+            Scope: GET /api/semilleros/mios, PUT /api/semilleros/{id}/avances
+          </span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold flex items-center gap-1 self-start md:self-auto py-1 px-2 rounded hover:bg-surface-container transition-colors" onclick="openSimulationForbidden()" title="Simular rechazo de recurso no vinculado" type="button">
+<span class="material-symbols-outlined text-[16px]">lock_open</span>
+<span>Test HTTP 403 Forbidden</span>
+</button>
+</div>
+<!-- Aviso de restricción VAIE -->
+<div class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg bg-surface-container-high/60 text-secondary">
+<span class="material-symbols-outlined text-[20px] text-tertiary">info</span>
+<p class="font-body-sm text-body-sm leading-snug">
+<strong class="text-on-surface font-semibold">Vista de ámbito estricto:</strong> Se listan exclusivamente los grupos de investigación formativa vinculados en la base de datos de la <span class="text-on-surface font-medium">Vicerrectoría Asistente de Investigación y Extensión (VAIE)</span>.
+        </p>
+</div>
+</section>
+<!-- 2. RESUMEN DE ACTIVIDAD Y KPI CARDS -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Semilleros Vinculados</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display text-display font-bold text-on-surface leading-none" id="kpi-semilleros">2</span>
+<span class="font-label-sm text-label-sm text-[#16A34A] font-semibold bg-[#DCFCE7] px-2 py-0.5 rounded-full">Activos VAIE</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">account_tree</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-3 pt-3 bg-surface-container-low/50 -mx-space-md -mb-space-md px-space-md pb-space-sm rounded-b-xl">
+          SIAWEB (Director) &amp; SIS-01 (Co-dir)
+        </p>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Estudiantes Asignados</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display text-display font-bold text-on-surface leading-none" id="kpi-estudiantes">20</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Investigadores</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">group</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-3 pt-3 bg-surface-container-low/50 -mx-space-md -mb-space-md px-space-md pb-space-sm rounded-b-xl font-body-sm text-body-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-[#16A34A]"></span>
+<span>100% matrículas activas 2026-I</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Proyectos &amp; Entregables</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display text-display font-bold text-on-surface leading-none" id="kpi-proyectos">7</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold bg-error-container/40 px-2 py-0.5 rounded-full">2 en revisión</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">assignment</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-3 pt-3 bg-surface-container-low/50 -mx-space-md -mb-space-md px-space-md pb-space-sm rounded-b-xl truncate">
+          5 aprobados • Próximo hito en 15d
+        </p>
+</div>
+<!-- KPI 4 (Con mini visualizador SVG de meta) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Plan VAIE 2026-I</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display text-display font-bold text-on-surface leading-none" id="kpi-cumplimiento">82%</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Cumplimiento</span>
+</div>
+</div>
+<!-- SVG Donut Chart Inline -->
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="w-12 h-12 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="82, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute material-symbols-outlined text-[14px] text-primary-container">trending_up</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-3 overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 82%"></div>
+</div>
+</div>
+</section>
+<!-- 3. SECCIÓN DE TARJETAS DE SEMILLEROS ASOCIADOS (/api/semilleros/mios) -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+            Semilleros Bajo Mi Gestión e Integración
+          </h2>
+<p class="font-body-sm text-body-sm text-secondary">
+            Mostrando semilleros institucionales registrados donde figura su firma académica.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs self-start sm:self-auto">
+<button class="px-3 py-2 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg shadow-sm flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">filter_list</span>
+<span>Semestre 2026-I</span>
+</button>
+<button class="px-3 py-2 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg shadow-sm flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">download</span>
+<span>Certificados VAIE</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- TARJETA SEMILLERO 1: SIAWEB -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between overflow-hidden">
+<div class="p-space-lg space-y-space-md">
+<!-- Top Header de Tarjeta -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm font-bold bg-primary-container text-on-primary px-3 py-1 rounded-lg tracking-wide shadow-sm">
+                  SIAWEB
+                </span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">
+                  ID: #1042
+                </span>
+<span class="font-label-sm text-label-sm bg-[#DCFCE7] text-[#15803D] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+                  REGISTRADO VIGENTE
+                </span>
+</div>
+<!-- Badge de rol de usuario -->
+<span class="font-label-sm text-label-sm bg-[#DBEAFE] text-[#1D4ED8] font-bold px-2.5 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+                Docente Directora Principal
+              </span>
+</div>
+<!-- Título Completo y Grupo -->
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">
+                Semillero de Investigación en Aplicaciones Web y Datos
+              </h3>
+<div class="flex items-center gap-2 mt-1.5 text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">domain</span>
+<span>Grupo de Adscripción: <strong class="text-on-surface font-semibold">GrupCIS</strong> (Categoría A MinCiencias)</span>
+</div>
+</div>
+<!-- Líneas de Investigación -->
+<div class="space-y-1.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Líneas de Investigación Activas:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-body-sm text-body-sm px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-medium">
+                  Arquitecturas Web Escalables
+                </span>
+<span class="font-body-sm text-body-sm px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-medium">
+                  DevOps e Infraestructura Cloud
+                </span>
+<span class="font-body-sm text-body-sm px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-medium">
+                  IA Aplicada
+                </span>
+</div>
+</div>
+<!-- Estudiante Líder Card Highlight -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-[#FEF3C7] text-[#B45309] flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wide">Estudiante Líder Designado</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Julián David Martínez</span>
+<span class="font-body-sm text-body-sm text-secondary font-mono">Cód. 2026901 • Ingeniería de Sistemas</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-medium hidden sm:inline-block">
+                8 Integrantes
+              </span>
+</div>
+<!-- Progreso y Próximos Hitos -->
+<div class="space-y-2 pt-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-secondary font-medium">Avance Plan de Trabajo VAIE:</span>
+<span class="text-primary-container font-bold">78% Completado</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-2 rounded-full transition-all duration-500" style="width: 78%"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-2">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary bg-surface rounded-lg p-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">calendar_clock</span>
+<span class="truncate">Reunión: <strong class="text-on-surface">Jueves 3:00 PM</strong> (Lab Sistemas)</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary bg-surface rounded-lg p-2">
+<span class="material-symbols-outlined text-[18px] text-primary">flag</span>
+<span class="truncate">Hito: <strong class="text-on-surface">Informe Parcial (15d)</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Acciones de Card 1 -->
+<div class="bg-surface-container-low px-space-lg py-space-md flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<button class="px-3.5 py-2 bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Ver Ficha Completa</span>
+</button>
+<button class="px-3.5 py-2 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg shadow-sm transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">group_add</span>
+<span>Gestionar Integrantes (8)</span>
+</button>
+</div>
+<button class="px-3 py-2 text-primary hover:text-primary-container font-label-md text-label-md rounded-lg hover:bg-surface-container transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Reportar Avance</span>
+</button>
+</div>
+</article>
+<!-- TARJETA SEMILLERO 2: SIS-01 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between overflow-hidden">
+<div class="p-space-lg space-y-space-md">
+<!-- Top Header de Tarjeta -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm font-bold bg-primary-container text-on-primary px-3 py-1 rounded-lg tracking-wide shadow-sm">
+                  SIS-01
+                </span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">
+                  ID: #1014
+                </span>
+<span class="font-label-sm text-label-sm bg-[#DCFCE7] text-[#15803D] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+                  REGISTRADO VIGENTE
+                </span>
+</div>
+<!-- Badge de rol de usuario -->
+<span class="font-label-sm text-label-sm bg-[#DBEAFE] text-[#1D4ED8] font-bold px-2.5 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">co_present</span>
+                Docente Co-directora / Asesora
+              </span>
+</div>
+<!-- Título Completo y Grupo -->
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">
+                Semillero de Inteligencia de Sistemas y Robótica
+              </h3>
+<div class="flex items-center gap-2 mt-1.5 text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">domain</span>
+<span>Grupo de Adscripción: <strong class="text-on-surface font-semibold">GITYD</strong> (Categoría B MinCiencias)</span>
+</div>
+</div>
+<!-- Líneas de Investigación -->
+<div class="space-y-1.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Líneas de Investigación Activas:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-body-sm text-body-sm px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-medium">
+                  Visión Artificial
+                </span>
+<span class="font-body-sm text-body-sm px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-medium">
+                  Automatización y Robótica Móvil
+                </span>
+</div>
+</div>
+<!-- Estudiante Líder Card Highlight -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-[#FEF3C7] text-[#B45309] flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wide">Estudiante Líder Designado</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Camila Andrea Peña</span>
+<span class="font-body-sm text-body-sm text-secondary font-mono">Cód. 2026844 • Ingeniería Electrónica</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-medium hidden sm:inline-block">
+                12 Integrantes
+              </span>
+</div>
+<!-- Progreso y Métricas Rápidas -->
+<div class="space-y-2 pt-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-secondary font-medium">Avance Plan de Trabajo VAIE:</span>
+<span class="text-primary-container font-bold">64% Completado</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-2 rounded-full transition-all duration-500" style="width: 64%"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-2">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary bg-surface rounded-lg p-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">groups</span>
+<span>Membresía: <strong class="text-on-surface">12 Estudiantes</strong></span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary bg-surface rounded-lg p-2">
+<span class="material-symbols-outlined text-[18px] text-[#16A34A]">inventory_2</span>
+<span>Entregables: <strong class="text-on-surface">2 Proyectos en curso</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Acciones de Card 2 -->
+<div class="bg-surface-container-low px-space-lg py-space-md flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<button class="px-3.5 py-2 bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Ver Ficha Completa</span>
+</button>
+<button class="px-3.5 py-2 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg shadow-sm transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">folder</span>
+<span>Ver Repositorio</span>
+</button>
+</div>
+<button class="px-3 py-2 text-secondary hover:text-on-surface font-label-md text-label-md rounded-lg hover:bg-surface-container transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+<span>Bitácoras</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- 4. COMPONENTE ELEGANTE DE SIMULACIÓN DE ERROR HTTP 403 FORBIDDEN -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md sm:p-space-lg shadow-md space-y-space-md relative overflow-hidden transition-all" id="forbidden-notification-container">
+<!-- Acento decorativo lateral -->
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-[#DC2626]"></div>
+<div class="flex flex-col sm:flex-row items-start justify-between gap-space-md pl-2">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-[#FEE2E2] text-[#DC2626] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">gpp_maybe</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-sm text-label-sm bg-[#FEE2E2] text-[#DC2626] font-bold px-2.5 py-0.5 rounded-full tracking-wider">
+                HTTP 403 FORBIDDEN • ÁMBITO NO AUTORIZADO
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">
+                Code: SEC_JWT_SCOPE_MISMATCH
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+              Acceso Restringido: Semillero SAD-01 (ID #1099)
+            </h3>
+<p class="font-body-md text-body-md text-secondary max-w-4xl">
+              No tiene privilegios para acceder al semillero <strong class="text-on-surface">"SAD-01 (Semillero de Análisis de Datos y Bioinformática)"</strong>. Según la política de seguridad JWT de la VAIE, los docentes y miembros solo pueden consultar la gestión interna de semilleros donde figuren como Director asignado o Integrante formalmente matriculado.
+            </p>
+</div>
+</div>
+<button class="text-secondary hover:text-on-surface p-1 rounded-lg hover:bg-surface-container transition-colors" onclick="closeForbiddenCard()" title="Cerrar advertencia" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Detalle técnico criptográfico y sugerencia -->
+<div class="ml-2 sm:ml-14 bg-surface-container-low rounded-xl p-space-md space-y-space-xs font-mono text-[12px] text-secondary">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-surface-container pb-2">
+<span class="text-on-surface font-semibold">Traza del Token JWT Evaluado:</span>
+<span class="text-primary font-medium">Gateway API /api/semilleros/1099</span>
+</div>
+<p class="pt-1 text-on-surface">
+          Claim 'semilleros_asociados' = <span class="text-tertiary font-bold">[1042, 1014]</span> | Recurso solicitado: <span class="text-[#DC2626] font-bold">ID=1099</span>
+</p>
+<p class="text-secondary font-sans font-body-sm text-body-sm">
+<strong class="text-on-surface">Acción sugerida:</strong> Si considera que debe coordinar este semillero, solicite a la Vicerrectoría Asistente de Investigación y Extensión (VAIE) la actualización de su vinculación institucional en el sistema SIGP-UFPS.
+        </p>
+</div>
+<!-- Botones de Acción de la Excepción -->
+<div class="ml-2 sm:ml-14 flex flex-wrap items-center gap-space-sm pt-1">
+<button class="px-4 py-2 bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg transition-colors" onclick="closeForbiddenCard()" type="button">
+          Entendido / Ocultar Notificación
+        </button>
+<button class="px-4 py-2 bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm transition-colors flex items-center gap-1.5" onclick="alert('Redirigiendo al Catálogo Público General de Semilleros UFPS (Acceso Lectura Libre)...')" type="button">
+<span class="material-symbols-outlined text-[18px]">public</span>
+<span>Explorar Catálogo Público General</span>
+</button>
+</div>
+</section>
+<!-- FOOTER INSTITUCIONAL DISCRETO -->
+<footer class="pt-space-md pb-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-primary-container">UFPS</span>
+<span>• Vicerrectoría Asistente de Investigación y Extensión (VAIE)</span>
+</div>
+<p>Sistema Integrado de Semilleros I+D+i © 2026. San José de Cúcuta, Colombia.</p>
+</footer>
+</div>
+</div>
+<script>
+  // Micro-interacción: Cambio dinámico entre Perfil Director y Perfil Miembro Estudiante
+  function switchProfile(role) {
+    const btnDirector = document.getElementById('btn-switch-director');
+    const btnMember = document.getElementById('btn-switch-member');
+    const displayName = document.getElementById('user-display-name');
+    const displayEmail = document.getElementById('user-display-email');
+    const roleBadge = document.getElementById('user-role-badge');
+    const jwtClaims = document.getElementById('jwt-claims-meta');
+    const kpiSemilleros = document.getElementById('kpi-semilleros');
+    const kpiEstudiantes = document.getElementById('kpi-estudiantes');
+    const kpiProyectos = document.getElementById('kpi-proyectos');
+    const kpiCumplimiento = document.getElementById('kpi-cumplimiento');
+
+    if (role === 'director') {
+      btnDirector.className = "px-3 py-1.5 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary font-semibold shadow-sm transition-all text-left flex items-center gap-1.5";
+      btnMember.className = "px-3 py-1.5 rounded-lg font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container transition-all text-left flex items-center gap-1.5";
+      
+      displayName.textContent = "Dra. María Elena Rodríguez";
+      displayEmail.innerHTML = '<span class="material-symbols-outlined text-[16px]">alternate_email</span> doc.rodriguez@ufps.edu.co <span class="text-secondary-fixed-dim">|</span> <span>Cód. Nómina: 40992-UFPS</span>';
+      roleBadge.textContent = "DIRECTOR DOCENTE";
+      roleBadge.className = "font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-semibold tracking-wide";
+      
+      jwtClaims.innerHTML = 'Sub: <strong class="text-on-surface font-medium">doc.rodriguez@ufps.edu.co</strong>';
+      kpiSemilleros.textContent = "2";
+      kpiEstudiantes.textContent = "20";
+      kpiProyectos.textContent = "7";
+      kpiCumplimiento.textContent = "82%";
+    } else {
+      btnMember.className = "px-3 py-1.5 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary font-semibold shadow-sm transition-all text-left flex items-center gap-1.5";
+      btnDirector.className = "px-3 py-1.5 rounded-lg font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container transition-all text-left flex items-center gap-1.5";
+      
+      displayName.textContent = "Julián David Martínez";
+      displayEmail.innerHTML = '<span class="material-symbols-outlined text-[16px]">alternate_email</span> julian.martinez@ufps.edu.co <span class="text-secondary-fixed-dim">|</span> <span>Cód. Estudiantil: 2026901</span>';
+      roleBadge.textContent = "MIEMBRO / LÍDER ESTUDIANTIL";
+      roleBadge.className = "font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-[#FEF3C7] text-[#B45309] font-bold tracking-wide";
+      
+      jwtClaims.innerHTML = 'Sub: <strong class="text-on-surface font-medium">julian.martinez@ufps.edu.co</strong>';
+      kpiSemilleros.textContent = "1";
+      kpiEstudiantes.textContent = "8";
+      kpiProyectos.textContent = "3";
+      kpiCumplimiento.textContent = "90%";
+    }
+  }
+
+  function closeForbiddenCard() {
+    const card = document.getElementById('forbidden-notification-container');
+    if (card) {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(-8px)';
+      setTimeout(() => {
+        card.style.display = 'none';
+      }, 250);
+    }
+  }
+
+  function openSimulationForbidden() {
+    const card = document.getElementById('forbidden-notification-container');
+    if (card) {
+      card.style.display = 'block';
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+      card.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script></main></div></body></html>

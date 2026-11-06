@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed-dim":"#bcc7de","on-error":"#ffffff","surface-container-low":"#eff4ff","surface-dim":"#cbdbf5","outline":"#906f6e","surface-container-high":"#dce9ff","error-container":"#ffdad6","inverse-primary":"#ffb3b1","on-tertiary-fixed":"#00174b","primary":"#9e001f","on-primary-fixed-variant":"#92001c","surface-bright":"#f8f9ff","on-primary":"#ffffff","surface-tint":"#bf0229","primary-fixed":"#ffdad8","background":"#f8f9ff","on-secondary-fixed-variant":"#3c475a","tertiary-fixed":"#dbe1ff","on-tertiary-container":"#dae1ff","on-primary-fixed":"#410007","on-secondary-container":"#586377","on-tertiary":"#ffffff","inverse-surface":"#213145","tertiary-fixed-dim":"#b4c5ff","surface-container":"#e5eeff","inverse-on-surface":"#eaf1ff","surface-variant":"#d3e4fe","on-surface":"#0b1c30","primary-container":"#c8102e","surface-container-highest":"#d3e4fe","secondary":"#545f73","surface-container-lowest":"#ffffff","outline-variant":"#e5bdbb","surface":"#f8f9ff","tertiary-container":"#1259e2","secondary-container":"#d5e0f8","on-tertiary-fixed-variant":"#003ea8","on-error-container":"#93000a","tertiary":"#0043b4","secondary-fixed":"#d8e3fb","on-secondary-fixed":"#111c2d","on-secondary":"#ffffff","on-background":"#0b1c30","primary-fixed-dim":"#ffb3b1","on-surface-variant":"#5c403f","on-primary-container":"#ffdad8","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","space-lg":"1.5rem","margin":"2rem","gutter-mobile":"1rem","space-xl":"2rem","space-md":"1rem","margin-mobile":"1rem"},"fontFamily":{"body-lg":["Inter"],"display":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display":["36px",{"lineHeight":"44px","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-inverse-surface/90"><img alt="Logo UFPS Investigación" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwVf3O-zxqkJUT1_xbYdJsq2pHY1fiJuCUlyote5mWHKJDG0BQzFQGNKpvJZZEi5Kumu9dSnXLQ1MAcRrZ1FCvkizu8MtLEwFyvO3b31Ob6k5mDcDvWxmPnAQv72gtDmVxQvR49EbkZzUCKksiOG-EccES2AgNUxom4x0aIMnnQijgGruiXw1v7dUcbl3T9d2jti3lCH14QXxZ1LqEQTy8c94KrhNkHU_fQl1Btww"/><div class="flex flex-col leading-tight"><span class="font-headline-sm text-headline-sm text-surface-container-lowest font-bold tracking-tight">UFPS</span><span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-wider">Semilleros I+D+i</span></div></div><div class="px-space-md py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim px-space-xs">Módulos de Gestión</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-lg border-l-4 border-primary-fixed"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="semilleros" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span>Semilleros</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="mis-semilleros" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span>Mis Semilleros</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-label-lg border-l-4 border-primary-fixed" data-path="registrar-semillero" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>Registrar Semillero</span></div><span class="bg-primary-container text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded-full">ADMIN</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="usuarios-y-roles" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Usuarios y Roles</span></a></nav></div><div class="flex flex-col pb-space-md px-space-sm"><div class="px-space-md py-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim px-space-xs">Ayuda y Soporte</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-variant/30 text-surface-container-lowest"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="documentacion" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>Documentación / Guía UFPS</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-secondary-fixed-dim hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="soporte-tecnico" href="#"><span class="material-symbols-outlined text-[18px]">headset_mic</span><span>Soporte Técnico</span></a></nav></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-xs font-label-md text-label-md text-secondary"><span class="hover:text-primary transition-colors cursor-pointer">UFPS</span><span class="text-secondary-fixed-dim">/</span><span class="hover:text-primary transition-colors cursor-pointer">Investigación</span><span class="text-secondary-fixed-dim">/</span><span class="text-on-surface font-semibold">Semilleros</span></div><div class="relative flex-1 max-w-xs ml-space-md"><span class="material-symbols-outlined absolute left-2.5 top-2.5 text-[18px] text-secondary">search</span><input class="w-full h-10 pl-8 pr-3 bg-surface rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary-container/20" placeholder="Buscar semilleros, código..." type="search"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center bg-surface-container-low p-1 rounded-lg gap-1"><span class="font-label-sm text-label-sm text-secondary px-1.5">Simular Rol:</span><button class="bg-primary-container text-on-primary font-label-sm text-label-sm px-2.5 py-1 rounded shadow-sm" type="button">ADMINISTRADOR</button><button class="text-secondary hover:text-on-surface font-label-sm text-label-sm px-2 py-1 rounded transition-colors" type="button">DIRECTOR</button><button class="text-secondary hover:text-on-surface font-label-sm text-label-sm px-2 py-1 rounded transition-colors" type="button">MIEMBRO</button></div><div class="flex items-center gap-space-sm pl-space-sm"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-sm text-label-sm text-on-surface font-semibold leading-none">admin.investigacion@ufps.edu.co</span><span class="inline-block mt-1 font-label-sm text-[10px] uppercase font-bold text-primary-container bg-error-container/60 px-1.5 py-0.5 rounded">ROLE_ADMINISTRADOR</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeZ64JJLe3cIuPzhJJbXl6CcS-MOksUGr_hbCnZNfpiSntCTpVraeZqJh9WnY9kxUkvYPH4vwJP_PTirAfJH7W6hmFpMgWFM3kDaL9r-N49Xi_p4FbnjXjys9IfT8f03L5vsGKhAsV9Tn-QBI_MnRHMsOMzyCbNnAN_TWMzpt5MSs6vLjsktSgBL5OCslUpl66Cryx3QdMjLqttm4pYIC4GY3M2hl_gNvpaHOH0Ok"/></div><button class="w-9 h-9 rounded-lg flex items-center justify-center text-secondary hover:bg-error-container hover:text-error transition-colors ml-space-xs" title="Cerrar Sesión" type="button"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto px-space-md lg:px-space-xl py-space-lg flex flex-col gap-space-xl">
+<!-- ENCABEZADO DE PÁGINA CON ESTADO TRANSACCIONAL -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-md border-b-0">
+<div class="flex flex-col max-w-3xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-container/10 text-primary-container font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            Módulo Exclusivo VAIE
+          </span>
+<span class="text-secondary font-label-sm text-label-sm">| Res. Consejo Superior 042/2021</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Registro Oficial de Nuevo Semillero de Investigación
+        </h1>
+<p class="font-body-md text-body-md text-secondary mt-1">
+          Diligencie la información requerida por la Vicerrectoría Asistente de Investigación y Extensión (VAIE - UFPS). Operación transaccional con validación estricta de reglas de negocio.
+        </p>
+</div>
+<!-- Badge de Estado de Validación -->
+<div class="flex items-center self-start md:self-auto bg-surface-container-lowest px-space-md py-2.5 rounded-xl shadow-sm gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container/40 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">Estado del Registro</span>
+<span class="px-2 py-0.5 rounded-full bg-[#DCFCE7] text-[#15803D] font-label-sm text-label-sm font-bold shadow-xs">
+              Listo (4/4 completas)
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">POST /api/semilleros preparado</span>
+</div>
+</div>
+</header>
+<!-- FORMULARIO ATÓMICO EN SECCIONES NUMERADAS -->
+<form class="flex flex-col gap-space-lg" id="registro-semillero-form" onsubmit="event.preventDefault(); window.simularEnvioRegistro();">
+<!-- SECCIÓN 1: DATOS BÁSICOS -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md transition-all hover:shadow-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-inverse-surface text-inverse-on-surface font-headline-sm text-headline-sm flex items-center justify-center font-bold">1</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Datos Básicos del Semillero</h2>
+<p class="font-body-sm text-body-sm text-secondary">Identificación institucional y adscripción a grupo de investigación</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-high/60 font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Requerido</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mt-space-xs">
+<!-- Nombre Completo -->
+<div class="lg:col-span-8 flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="nombre-semillero">
+              Nombre Completo del Semillero <span class="text-primary-container">*</span>
+</label>
+<input class="h-10 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-secondary shadow-sm focus:outline-none focus:bg-surface-container-low transition-colors" id="nombre-semillero" placeholder="Ej. Semillero de Desarrollo de Software y Sistemas Distribuidos" required="" type="text" value="Semillero de Investigación en Aplicaciones Web e Inteligencia de Datos"/>
+<span class="font-body-sm text-body-sm text-secondary">Debe reflejar las áreas de exploración avaladas formalmente por el departamento.</span>
+</div>
+<!-- Sigla Institucional con Validación en Vivo -->
+<div class="lg:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="sigla-semillero">
+<span>Sigla Institucional <span class="text-primary-container">*</span></span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-[#15803D] font-bold" id="sigla-status">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Sigla disponible
+              </span>
+</label>
+<div class="relative">
+<input class="w-full h-10 px-3.5 pr-10 rounded-lg bg-surface-container-lowest text-on-surface uppercase font-headline-sm text-headline-sm font-bold tracking-wider shadow-sm focus:outline-none focus:bg-surface-container-low transition-colors" id="sigla-semillero" maxlength="10" oninput="this.value = this.value.toUpperCase(); window.validarSigla(this.value);" placeholder="EJ. SIAWEB" required="" type="text" value="SIAWEB"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-[#15803D] text-[20px]">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Máximo 10 caracteres alfanuméricos únicos.</span>
+</div>
+<!-- Grupo de Investigación Patrocinador -->
+<div class="lg:col-span-12 flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="grupo-investigacion">
+              Grupo de Investigación Patrocinador <span class="text-primary-container">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3.5 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-low appearance-none transition-colors" id="grupo-investigacion" required="">
+<option selected="" value="GRUPCIS">GrupCIS - Grupo de Computación e Informática y Sistemas (Categoría A MinCiencias - COL0039218)</option>
+<option value="GITYD">GITYD - Grupo de Investigación en Tecnologías y Desarrollo (Categoría B MinCiencias)</option>
+<option value="GISE">GISE - Grupo de Investigación en Sistemas Embebidos y Control (Categoría A1 MinCiencias)</option>
+<option value="COMBAS">COMBAS - Computación Básica y Aplicada</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 pointer-events-none text-secondary text-[20px]">arrow_drop_down</span>
+</div>
+</div>
+<!-- Misión Institucional -->
+<div class="lg:col-span-6 flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="mision">Misión del Semillero <span class="text-primary-container">*</span></label>
+<textarea class="p-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-low resize-none transition-colors" id="mision" placeholder="Describa el propósito formativo e impacto social..." required="" rows="3">Fomentar la cultura de investigación formativa en el desarrollo de arquitecturas web contemporáneas, preparando a los estudiantes mediante metodologías ágiles y proyectos interdisciplinarios que aporten al ecosistema digital regional.</textarea>
+</div>
+<!-- Visión Institucional -->
+<div class="lg:col-span-6 flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="vision">Visión Institucional <span class="text-primary-container">*</span></label>
+<textarea class="p-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-low resize-none transition-colors" id="vision" placeholder="Proyección a mediano y largo plazo..." required="" rows="3">Consolidarse para el año 2028 como semillero referente en la región nororiental en innovación algorítmica y modelos de datos web, publicando activamente en eventos indexados RedCOLSI y MinCiencias.</textarea>
+</div>
+<!-- Objetivo General -->
+<div class="lg:col-span-12 flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="objetivo">Objetivo General de Investigación <span class="text-primary-container">*</span></label>
+<textarea class="p-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-low resize-none transition-colors" id="objetivo" placeholder="Describa el objetivo científico estructurado con verbo infinitivo..." required="" rows="2">Desarrollar soluciones de software robustas basadas en microservicios y minería de datos aplicada para optimizar procesos analíticos en sectores productivos del departamento Norte de Santander.</textarea>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 2: DATOS DEL DIRECTOR -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md transition-all hover:shadow-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-inverse-surface text-inverse-on-surface font-headline-sm text-headline-sm flex items-center justify-center font-bold">2</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Datos del Director del Semillero</h2>
+<p class="font-body-sm text-body-sm text-secondary">Docente de planta o catedrático responsable del aval técnico ante la VAIE</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-[#DBEAFE] text-[#1D4ED8] font-label-sm text-label-sm font-bold">DOCENTE REGISTRADO</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mt-space-xs">
+<!-- Buscador / Nombre Completo -->
+<div class="lg:col-span-5 flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="nombre-director">
+              Nombre Completo del Director <span class="text-primary-container">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 pl-10 pr-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-low transition-colors" id="nombre-director" placeholder="Buscar por cédula o nombre..." required="" type="text" value="Dra. María Elena Rodríguez"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-[20px]">person_search</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Docente Titular con CvLAC actualizado.</span>
+</div>
+<!-- Correo Institucional Obligatorio -->
+<div class="lg:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="correo-director">
+              Correo Electrónico Institucional (@ufps.edu.co) <span class="text-primary-container">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 pl-10 pr-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md cursor-not-allowed shadow-sm focus:outline-none" id="correo-director" readonly="" required="" type="email" value="doc.rodriguez@ufps.edu.co"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-[20px]">mail</span>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-[#15803D] text-[18px]">lock</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Vinculado automáticamente por el directorio LDAP universitario.</span>
+</div>
+<!-- Departamento Académico -->
+<div class="lg:col-span-3 flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="departamento">
+              Departamento Académico <span class="text-primary-container">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-9 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-low appearance-none transition-colors" id="departamento" required="">
+<option selected="" value="SISTEMAS">Sistemas e Informática</option>
+<option value="ELECTRONICA">Electricidad y Electrónica</option>
+<option value="CIVIL">Construcciones Civiles</option>
+<option value="INDUSTRIAL">Ingeniería de Producción Industrial</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 pointer-events-none text-secondary text-[20px]">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 3: LÍNEAS DE INVESTIGACIÓN -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md transition-all hover:shadow-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-inverse-surface text-inverse-on-surface font-headline-sm text-headline-sm flex items-center justify-center font-bold">3</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Líneas de Investigación Temáticas</h2>
+<p class="font-body-sm text-body-sm text-secondary">Mínimo 1 línea obligatoria avalada por el comité curricular</p>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold" id="lineas-contador">
+            3 registradas
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Entrada de Nueva Línea -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
+<div class="relative flex-1">
+<input class="w-full h-10 pl-10 pr-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-low transition-colors" id="nueva-linea-input" onkeypress="if(event.key === 'Enter'){ event.preventDefault(); window.agregarLinea(); }" placeholder="Escriba el nombre de una nueva línea (ej. Ciberseguridad en Entornos Cloud)..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-[20px]">label</span>
+</div>
+<button class="h-10 px-space-md rounded-lg bg-inverse-surface text-inverse-on-surface hover:bg-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors shadow-sm" onclick="window.agregarLinea()" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>+ Agregar Línea</span>
+</button>
+</div>
+<!-- Contenedor dinámico de Chips -->
+<div class="flex flex-wrap items-center gap-2 pt-2" id="contenedor-lineas">
+<!-- Chip 1 -->
+<div class="linea-chip inline-flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-lg shadow-xs group">
+<span class="material-symbols-outlined text-primary-container text-[16px]">neurology</span>
+<span class="font-label-md text-label-md text-on-surface">Arquitecturas Web Escalables</span>
+<button class="w-5 h-5 rounded-full flex items-center justify-center text-primary-container hover:bg-primary-container hover:text-on-primary transition-colors ml-1" onclick="window.removerLinea(this)" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<!-- Chip 2 -->
+<div class="linea-chip inline-flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-lg shadow-xs group">
+<span class="material-symbols-outlined text-primary-container text-[16px]">cloud_sync</span>
+<span class="font-label-md text-label-md text-on-surface">DevOps e Infraestructura</span>
+<button class="w-5 h-5 rounded-full flex items-center justify-center text-primary-container hover:bg-primary-container hover:text-on-primary transition-colors ml-1" onclick="window.removerLinea(this)" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<!-- Chip 3 -->
+<div class="linea-chip inline-flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-lg shadow-xs group">
+<span class="material-symbols-outlined text-primary-container text-[16px]">school</span>
+<span class="font-label-md text-label-md text-on-surface">Inteligencia Artificial Aplicada a la Educación</span>
+<button class="w-5 h-5 rounded-full flex items-center justify-center text-primary-container hover:bg-primary-container hover:text-on-primary transition-colors ml-1" onclick="window.removerLinea(this)" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 text-secondary font-body-sm text-body-sm mt-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">info</span>
+<span>Debe registrar al menos una línea temática avalada por el comité curricular departamental.</span>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 4: TABLA DINÁMICA DE INTEGRANTES -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md transition-all hover:shadow-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-inverse-surface text-inverse-on-surface font-headline-sm text-headline-sm flex items-center justify-center font-bold">4</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Integrantes Estudiantiles del Semillero</h2>
+<p class="font-body-sm text-body-sm text-secondary">Semilleristas activos adscritos a planes curriculares vigentes</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-[#FEF3C7] text-[#B45309] font-label-sm text-label-sm font-bold shadow-xs" id="badge-lider-status">
+              ✓ Líder Asignado (1 de 1)
+            </span>
+</div>
+</div>
+<!-- Alerta Informativa de Regla de Negocio -->
+<div class="bg-[#EFF6FF] rounded-lg p-space-md flex items-start gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-tertiary-container text-[22px] shrink-0 mt-0.5">policy</span>
+<div class="flex flex-col text-body-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold">Regla de Negocio UFPS:</span>
+<span class="text-secondary font-body-sm text-body-sm">
+              Cada semillero debe contar obligatoriamente con <strong class="text-on-surface font-semibold">exactamente un (1) Estudiante Líder asignado</strong>. Los códigos estudiantiles no pueden duplicarse en la solicitud.
+            </span>
+</div>
+</div>
+<!-- Tabla Interactiva -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-lowest shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low h-11 text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="px-4 font-bold">Código Estudiantil</th>
+<th class="px-4 font-bold">Nombre Completo</th>
+<th class="px-4 font-bold">Programa Académico</th>
+<th class="px-4 font-bold text-center">Rol en Semillero</th>
+<th class="px-4 font-bold text-right">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="estudiantes-tabla-body">
+<!-- Fila 1 -->
+<tr class="h-14 hover:bg-surface-container transition-colors bg-surface-container-lowest" data-codigo="2026901">
+<td class="px-4 font-body-md text-body-md text-on-surface font-bold">2026901</td>
+<td class="px-4 font-body-md text-body-md text-on-surface">Julián David Martínez</td>
+<td class="px-4 font-body-md text-body-md text-secondary">Ingeniería de Sistemas</td>
+<td class="px-4 text-center">
+<label class="inline-flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 text-primary-container focus:ring-primary-container" name="estudiante_lider" onchange="window.actualizarLiderRadio(this)" type="radio" value="2026901"/>
+<span class="badge-lider px-2 py-0.5 rounded bg-[#FEF3C7] text-[#B45309] font-label-sm text-label-sm font-bold">
+                      LÍDER ASIGNADO
+                    </span>
+</label>
+</td>
+<td class="px-4 text-right">
+<button class="w-8 h-8 rounded-lg inline-flex items-center justify-center text-error hover:bg-error-container/40 transition-colors" onclick="window.eliminarFilaEstudiante(this)" title="Remover estudiante" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Fila 2 -->
+<tr class="h-14 hover:bg-surface-container transition-colors bg-surface-container-lowest" data-codigo="2026945">
+<td class="px-4 font-body-md text-body-md text-on-surface font-bold">2026945</td>
+<td class="px-4 font-body-md text-body-md text-on-surface">Valeria Sofía Durán</td>
+<td class="px-4 font-body-md text-body-md text-secondary">Ingeniería de Sistemas</td>
+<td class="px-4 text-center">
+<label class="inline-flex items-center gap-2 cursor-pointer">
+<input class="w-4 h-4 text-primary-container focus:ring-primary-container" name="estudiante_lider" onchange="window.actualizarLiderRadio(this)" type="radio" value="2026945"/>
+<span class="badge-lider hidden px-2 py-0.5 rounded bg-[#FEF3C7] text-[#B45309] font-label-sm text-label-sm font-bold">
+                      LÍDER ASIGNADO
+                    </span>
+<span class="badge-miembro text-secondary font-label-sm text-label-sm">Miembro</span>
+</label>
+</td>
+<td class="px-4 text-right">
+<button class="w-8 h-8 rounded-lg inline-flex items-center justify-center text-error hover:bg-error-container/40 transition-colors" onclick="window.eliminarFilaEstudiante(this)" title="Remover estudiante" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Fila 3 -->
+<tr class="h-14 hover:bg-surface-container transition-colors bg-surface-container-lowest" data-codigo="2025112">
+<td class="px-4 font-body-md text-body-md text-on-surface font-bold">2025112</td>
+<td class="px-4 font-body-md text-body-md text-on-surface">Mateo Camilo Vargas</td>
+<td class="px-4 font-body-md text-body-md text-secondary">Ingeniería Electrónica</td>
+<td class="px-4 text-center">
+<label class="inline-flex items-center gap-2 cursor-pointer">
+<input class="w-4 h-4 text-primary-container focus:ring-primary-container" name="estudiante_lider" onchange="window.actualizarLiderRadio(this)" type="radio" value="2025112"/>
+<span class="badge-lider hidden px-2 py-0.5 rounded bg-[#FEF3C7] text-[#B45309] font-label-sm text-label-sm font-bold">
+                      LÍDER ASIGNADO
+                    </span>
+<span class="badge-miembro text-secondary font-label-sm text-label-sm">Miembro</span>
+</label>
+</td>
+<td class="px-4 text-right">
+<button class="w-8 h-8 rounded-lg inline-flex items-center justify-center text-error hover:bg-error-container/40 transition-colors" onclick="window.eliminarFilaEstudiante(this)" title="Remover estudiante" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Fila de Adición Rápida -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col lg:flex-row items-stretch lg:items-center gap-space-sm mt-space-xs">
+<div class="w-full lg:w-44 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Código</span>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-bright" id="nuevo-estudiante-codigo" maxlength="10" placeholder="Ej. 1152001" type="text"/>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Nombre Completo</span>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-bright" id="nuevo-estudiante-nombre" placeholder="Ej. Andrea Carolina Peñaranda" type="text"/>
+</div>
+<div class="w-full lg:w-60 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Programa</span>
+<select class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-bright" id="nuevo-estudiante-programa">
+<option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+<option value="Ingeniería Electrónica">Ingeniería Electrónica</option>
+<option value="Ingeniería Industrial">Ingeniería Industrial</option>
+<option value="Tecnología en Desarrollo de Software">Tecnología en Dev Software</option>
+</select>
+</div>
+<div class="flex items-center gap-2 pt-2 lg:pt-5 lg:px-2">
+<label class="flex items-center gap-1.5 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary-container" id="nuevo-es-lider" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Asignar como Líder</span>
+</label>
+</div>
+<div class="pt-2 lg:pt-5">
+<button class="w-full lg:w-auto h-10 px-space-md rounded-lg bg-inverse-surface text-inverse-on-surface hover:bg-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors shadow-sm shrink-0" onclick="window.agregarNuevoEstudiante()" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>+ Agregar Integrante</span>
+</button>
+</div>
+</div>
+</section>
+<!-- BARRA DE ACCIONES TRANSACCIONALES INFERIOR -->
+<footer class="sticky bottom-4 z-30 bg-inverse-surface text-inverse-on-surface rounded-xl shadow-xl p-space-md flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Resumen de Validaciones Activas -->
+<div class="flex flex-wrap items-center gap-2 lg:gap-3">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-variant/20 text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-[#DCFCE7]">check_circle</span>
+<span>Sigla única validada</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-variant/20 text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-[#DCFCE7]">check_circle</span>
+<span>Director activo</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-variant/20 text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-[#DCFCE7]">check_circle</span>
+<span id="footer-lineas-resumen">3 Líneas temáticas</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-variant/20 text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-[#DCFCE7]">check_circle</span>
+<span id="footer-lider-resumen">1 Líder único seleccionado</span>
+</div>
+</div>
+<!-- Botones de Acción -->
+<div class="flex items-center justify-end gap-space-sm">
+<button class="h-10 px-space-md rounded-lg font-label-lg text-label-lg text-inverse-on-surface hover:bg-surface-variant/20 transition-colors" onclick="if(confirm('¿Desea descartar los cambios del nuevo semillero?')){ window.location.reload(); }" type="button">
+            Cancelar / Descartar
+          </button>
+<button class="h-10 px-space-lg rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg font-bold flex items-center gap-2 shadow-md transition-all active:scale-[0.98]" id="btn-submit-semillero" type="submit">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Guardar y Registrar Semillero</span>
+</button>
+</div>
+</footer>
+</form>
+<!-- Modal de Confirmación de Éxito Transaccional -->
+<div class="fixed inset-0 bg-inverse-surface/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4" id="modal-confirmacion">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl max-w-lg w-full p-space-lg flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-full bg-[#DCFCE7] text-[#15803D] flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">¡Semillero Registrado con Éxito!</h3>
+<p class="font-body-md text-body-md text-secondary">
+            La transacción <code class="font-bold text-primary-container">POST /api/semilleros</code> respondió con código <strong>201 CREATED</strong>. Se ha notificado formalmente a la dirección del grupo y al docente líder.
+          </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg text-body-sm flex flex-col gap-1 font-body-sm text-body-sm">
+<div class="flex justify-between"><span class="text-secondary">Código Radicado:</span> <span class="font-bold text-on-surface">UFPS-SEM-2025-0089</span></div>
+<div class="flex justify-between"><span class="text-secondary">Sigla Oficial:</span> <span class="font-bold text-on-surface" id="modal-sigla">SIAWEB</span></div>
+<div class="flex justify-between"><span class="text-secondary">Integrantes Registrados:</span> <span class="font-bold text-on-surface" id="modal-integrantes">3 Estudiantes</span></div>
+</div>
+<div class="flex justify-end gap-space-sm mt-space-xs">
+<button class="h-10 px-space-lg rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg font-bold" onclick="document.getElementById('modal-confirmacion').classList.add('hidden')" type="button">
+            Entendido y Finalizar
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interacción: Validación reactiva de Sigla
+  window.validarSigla = function(val) {
+    const statusEl = document.getElementById('sigla-status');
+    const clean = val.trim().toUpperCase();
+    if(clean.length < 3) {
+      statusEl.innerHTML = '<span class="material-symbols-outlined text-[14px] text-error">cancel</span> Muy corta';
+      statusEl.className = 'inline-flex items-center gap-1 font-label-sm text-label-sm text-error font-bold';
+    } else if(clean === 'EXISTENTE' || clean === 'GITYD') {
+      statusEl.innerHTML = '<span class="material-symbols-outlined text-[14px] text-error">error</span> Sigla ya en uso';
+      statusEl.className = 'inline-flex items-center gap-1 font-label-sm text-label-sm text-error font-bold';
+    } else {
+      statusEl.innerHTML = '<span class="material-symbols-outlined text-[14px] text-[#15803D]">check_circle</span> Sigla disponible';
+      statusEl.className = 'inline-flex items-center gap-1 font-label-sm text-label-sm text-[#15803D] font-bold';
+    }
+  };
+
+  // Gestión de Chips de Líneas de Investigación
+  window.agregarLinea = function() {
+    const input = document.getElementById('nueva-linea-input');
+    const valor = input.value.trim();
+    if(!valor) return;
+
+    const cont = document.getElementById('contenedor-lineas');
+    const nuevoChip = document.createElement('div');
+    nuevoChip.className = 'linea-chip inline-flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-lg shadow-xs group';
+    nuevoChip.innerHTML = `
+      <span class="material-symbols-outlined text-primary-container text-[16px]">science</span>
+      <span class="font-label-md text-label-md text-on-surface">${valor}</span>
+      <button type="button" onclick="window.removerLinea(this)" class="w-5 h-5 rounded-full flex items-center justify-center text-primary-container hover:bg-primary-container hover:text-on-primary transition-colors ml-1">
+        <span class="material-symbols-outlined text-[14px]">close</span>
+      </button>
+    `;
+    cont.appendChild(nuevoChip);
+    input.value = '';
+    window.actualizarResumenLineas();
+  };
+
+  window.removerLinea = function(btn) {
+    const chips = document.querySelectorAll('.linea-chip');
+    if(chips.length <= 1) {
+      alert('Regla de negocio: El semillero debe tener al menos una (1) línea de investigación registrada.');
+      return;
+    }
+    btn.closest('.linea-chip').remove();
+    window.actualizarResumenLineas();
+  };
+
+  window.actualizarResumenLineas = function() {
+    const total = document.querySelectorAll('.linea-chip').length;
+    document.getElementById('lineas-contador').innerText = `${total} registradas`;
+    document.getElementById('footer-lineas-resumen').innerText = `${total} Líneas temáticas`;
+  };
+
+  // Gestión de Estudiantes e Integrantes
+  window.actualizarLiderRadio = function(radioElem) {
+    const trs = document.querySelectorAll('#estudiantes-tabla-body tr');
+    trs.forEach(tr => {
+      const badgeLider = tr.querySelector('.badge-lider');
+      const badgeMiembro = tr.querySelector('.badge-miembro');
+      const radio = tr.querySelector('input[type="radio"]');
+
+      if (radio && radio.checked) {
+        if (badgeLider) badgeLider.classList.remove('hidden');
+        if (badgeMiembro) badgeMiembro.classList.add('hidden');
+      } else {
+        if (badgeLider) badgeLider.classList.add('hidden');
+        if (badgeMiembro) badgeMiembro.classList.remove('hidden');
+      }
+    });
+
+    const badgeHeader = document.getElementById('badge-lider-status');
+    badgeHeader.className = 'px-2.5 py-1 rounded-full bg-[#FEF3C7] text-[#B45309] font-label-sm text-label-sm font-bold shadow-xs';
+    badgeHeader.innerText = '✓ Líder Asignado (1 de 1)';
+    document.getElementById('footer-lider-resumen').innerText = '1 Líder único seleccionado';
+  };
+
+  window.eliminarFilaEstudiante = function(btn) {
+    const tbody = document.getElementById('estudiantes-tabla-body');
+    const rows = tbody.querySelectorAll('tr');
+    if (rows.length <= 1) {
+      alert('Un semillero no puede registrarse sin integrantes.');
+      return;
+    }
+    const row = btn.closest('tr');
+    const radio = row.querySelector('input[type="radio"]');
+    const eraLider = radio && radio.checked;
+
+    row.remove();
+
+    if(eraLider) {
+      const remainingRadios = tbody.querySelectorAll('input[type="radio"]');
+      if (remainingRadios.length > 0) {
+        remainingRadios[0].checked = true;
+        window.actualizarLiderRadio(remainingRadios[0]);
+      }
+    }
+  };
+
+  window.agregarNuevoEstudiante = function() {
+    const codInput = document.getElementById('nuevo-estudiante-codigo');
+    const nomInput = document.getElementById('nuevo-estudiante-nombre');
+    const progSelect = document.getElementById('nuevo-estudiante-programa');
+    const liderCheck = document.getElementById('nuevo-es-lider');
+
+    const codigo = codInput.value.trim();
+    const nombre = nomInput.value.trim();
+    const programa = progSelect.value;
+
+    if (!codigo || !nombre) {
+      alert('Por favor complete el código y nombre completo del estudiante.');
+      return;
+    }
+
+    // Regla de Negocio: Códigos no repetidos
+    const existentes = Array.from(document.querySelectorAll('#estudiantes-tabla-body tr')).map(tr => tr.getAttribute('data-codigo'));
+    if (existentes.includes(codigo)) {
+      alert(`El código estudiantil [${codigo}] ya se encuentra añadido en este semillero.`);
+      return;
+    }
+
+    const tbody = document.getElementById('estudiantes-tabla-body');
+    const esLider = liderCheck.checked;
+
+    const tr = document.createElement('tr');
+    tr.className = 'h-14 hover:bg-surface-container transition-colors bg-surface-container-lowest';
+    tr.setAttribute('data-codigo', codigo);
+
+    tr.innerHTML = `
+      <td class="px-4 font-body-md text-body-md text-on-surface font-bold">${codigo}</td>
+      <td class="px-4 font-body-md text-body-md text-on-surface">${nombre}</td>
+      <td class="px-4 font-body-md text-body-md text-secondary">${programa}</td>
+      <td class="px-4 text-center">
+        <label class="inline-flex items-center gap-2 cursor-pointer">
+          <input 
+            type="radio" 
+            name="estudiante_lider" 
+            value="${codigo}" 
+            ${esLider ? 'checked' : ''} 
+            onchange="window.actualizarLiderRadio(this)"
+            class="w-4 h-4 text-primary-container focus:ring-primary-container"
+          />
+          <span class="badge-lider ${esLider ? '' : 'hidden'} px-2 py-0.5 rounded bg-[#FEF3C7] text-[#B45309] font-label-sm text-label-sm font-bold">
+            LÍDER ASIGNADO
+          </span>
+          <span class="badge-miembro ${esLider ? 'hidden' : ''} text-secondary font-label-sm text-label-sm">Miembro</span>
+        </label>
+      </td>
+      <td class="px-4 text-right">
+        <button 
+          type="button" 
+          onclick="window.eliminarFilaEstudiante(this)" 
+          class="w-8 h-8 rounded-lg inline-flex items-center justify-center text-error hover:bg-error-container/40 transition-colors"
+          title="Remover estudiante"
+        >
+          <span class="material-symbols-outlined text-[18px]">delete</span>
+        </button>
+      </td>
+    `;
+
+    tbody.appendChild(tr);
+
+    if (esLider) {
+      window.actualizarLiderRadio(tr.querySelector('input[type="radio"]'));
+    }
+
+    // Limpieza de campos
+    codInput.value = '';
+    nomInput.value = '';
+    liderCheck.checked = false;
+  };
+
+  // Simulación del POST transaccional
+  window.simularEnvioRegistro = function() {
+    const sigla = document.getElementById('sigla-semillero').value || 'SIAWEB';
+    const numEstudiantes = document.querySelectorAll('#estudiantes-tabla-body tr').length;
+    
+    document.getElementById('modal-sigla').innerText = sigla;
+    document.getElementById('modal-integrantes').innerText = `${numEstudiantes} Estudiantes`;
+    document.getElementById('modal-confirmacion').classList.remove('hidden');
+  };
+</script></main></div></body></html>
