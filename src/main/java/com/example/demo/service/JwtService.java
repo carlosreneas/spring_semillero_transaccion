@@ -1,6 +1,6 @@
-package com.example.demo.auth;
+package com.example.demo.service;
 
-import com.example.demo.seguridad.JwtConfig;
+import com.example.demo.config.JwtConfig;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;

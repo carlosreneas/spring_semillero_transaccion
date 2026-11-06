@@ -1,5 +1,8 @@
-package com.example.demo.usuario;
+package com.example.demo.controller;
 
+import com.example.demo.dto.request.CrearUsuarioRequest;
+import com.example.demo.dto.response.UsuarioResumen;
+import com.example.demo.service.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;

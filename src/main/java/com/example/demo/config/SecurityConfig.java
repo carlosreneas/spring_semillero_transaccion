@@ -1,5 +1,6 @@
-package com.example.demo.seguridad;
+package com.example.demo.config;
 
+import com.example.demo.service.DbUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

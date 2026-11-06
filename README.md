@@ -118,23 +118,40 @@ erDiagram
 src/main/java/com/example/demo/
 ├── DemoApplication.java
 ├── StatusController.java
+├── config/
+│   ├── DemoData.java
+│   ├── JwtConfig.java
+│   ├── OpenApiConfig.java
+│   └── SecurityConfig.java
 ├── controller/
-│   └── SemilleroController.java
+│   ├── AuthController.java
+│   ├── SemilleroController.java
+│   └── UsuarioController.java
 ├── dto/
 │   ├── request/
+│   │   ├── CrearUsuarioRequest.java
 │   │   ├── DirectorRequest.java
 │   │   ├── IntegranteRequest.java
+│   │   ├── LoginRequest.java
 │   │   └── SemilleroRequest.java
 │   └── response/
 │       ├── ErrorResponse.java
-│       └── SemilleroResponse.java
+│       ├── LoginResponse.java
+│       ├── SemilleroResponse.java
+│       └── UsuarioResumen.java
 ├── entity/
 │   ├── Director.java
 │   ├── Integrante.java
 │   ├── Linea.java
-│   └── Semillero.java
+│   ├── Producto.java
+│   ├── Rol.java
+│   ├── Semillero.java
+│   ├── TipoProducto.java
+│   └── Usuario.java
 ├── exception/
+│   ├── ConflictoException.java
 │   ├── GlobalExceptionHandler.java
+│   ├── RecursoNoEncontradoException.java
 │   ├── ReglaNegocioException.java
 │   └── SiglaDuplicadaException.java
 ├── mapper/
@@ -146,9 +163,19 @@ src/main/java/com/example/demo/
 │   ├── DirectorRepository.java
 │   ├── IntegranteRepository.java
 │   ├── LineaRepository.java
-│   └── SemilleroRepository.java
+│   ├── ProductoRepository.java
+│   ├── RolRepository.java
+│   ├── SemilleroRepository.java
+│   └── UsuarioRepository.java
+├── seguridad/
+│   ├── AccesoSemillero.java
+│   └── JwtAuthenticationFilter.java
 └── service/
-    └── SemilleroService.java
+    ├── AuthService.java
+    ├── DbUserDetailsService.java
+    ├── JwtService.java
+    ├── SemilleroService.java
+    └── UsuarioService.java
 ```
 
 ---

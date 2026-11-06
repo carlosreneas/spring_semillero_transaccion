@@ -1,4 +1,4 @@
-package com.example.demo.seguridad;
+package com.example.demo.config;
 
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,5 +1,8 @@
-package com.example.demo.auth;
+package com.example.demo.controller;
 
+import com.example.demo.dto.request.LoginRequest;
+import com.example.demo.dto.response.LoginResponse;
+import com.example.demo.service.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,7 +1,13 @@
-package com.example.demo.usuario;
+package com.example.demo.service;
 
+import com.example.demo.dto.request.CrearUsuarioRequest;
+import com.example.demo.dto.response.UsuarioResumen;
+import com.example.demo.entity.Rol;
+import com.example.demo.entity.Usuario;
 import com.example.demo.exception.ConflictoException;
 import com.example.demo.exception.ReglaNegocioException;
+import com.example.demo.repository.RolRepository;
+import com.example.demo.repository.UsuarioRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

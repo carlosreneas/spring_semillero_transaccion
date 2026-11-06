@@ -1,8 +1,8 @@
 package com.example.demo.config;
 
-import com.example.demo.usuario.RolRepository;
-import com.example.demo.usuario.Usuario;
-import com.example.demo.usuario.UsuarioRepository;
+import com.example.demo.entity.Usuario;
+import com.example.demo.repository.RolRepository;
+import com.example.demo.repository.UsuarioRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,4 +31,3 @@ public class DemoData {
         };
     }
 }
-

@@ -1,7 +1,7 @@
-package com.example.demo.seguridad;
+package com.example.demo.service;
 
-import com.example.demo.usuario.Usuario;
-import com.example.demo.usuario.UsuarioRepository;
+import com.example.demo.entity.Usuario;
+import com.example.demo.repository.UsuarioRepository;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

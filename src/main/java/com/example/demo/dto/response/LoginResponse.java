@@ -1,4 +1,4 @@
-package com.example.demo.auth;
+package com.example.demo.dto.response;
 
 public record LoginResponse(String accessToken, String tokenType, long expiresInSeconds) {}
 

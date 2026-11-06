@@ -1,9 +1,9 @@
 package com.example.demo.seguridad;
 
+import com.example.demo.entity.Usuario;
 import com.example.demo.repository.IntegranteRepository;
 import com.example.demo.repository.SemilleroRepository;
-import com.example.demo.usuario.Usuario;
-import com.example.demo.usuario.UsuarioRepository;
+import com.example.demo.repository.UsuarioRepository;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Component;
@@ -49,4 +49,3 @@ public class AccesoSemillero {
             || esMiembro(semilleroId, auth);
     }
 }
-

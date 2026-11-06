@@ -1,5 +1,7 @@
-package com.example.demo.auth;
+package com.example.demo.service;
 
+import com.example.demo.dto.request.LoginRequest;
+import com.example.demo.dto.response.LoginResponse;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Service;

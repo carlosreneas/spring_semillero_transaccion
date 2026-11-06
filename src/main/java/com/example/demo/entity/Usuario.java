@@ -1,4 +1,4 @@
-package com.example.demo.usuario;
+package com.example.demo.entity;
 
 import jakarta.persistence.*;
 import java.util.HashSet;
