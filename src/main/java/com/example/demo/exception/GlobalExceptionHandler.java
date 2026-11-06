@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -13,6 +15,54 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
+    @ExceptionHandler(AuthenticationException.class)                        // NUEVO
+    public ResponseEntity<ErrorResponse> noAutenticado(AuthenticationException e) {
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+            .body(new ErrorResponse(
+                LocalDateTime.now(),
+                HttpStatus.UNAUTHORIZED.value(),
+                HttpStatus.UNAUTHORIZED.getReasonPhrase(),
+                "Credenciales inválidas",
+                List.of("Credenciales inválidas")
+            ));
+    }
+
+    @ExceptionHandler(AccessDeniedException.class)                          // NUEVO
+    public ResponseEntity<ErrorResponse> sinPermiso(AccessDeniedException e) {
+        return ResponseEntity.status(HttpStatus.FORBIDDEN)
+            .body(new ErrorResponse(
+                LocalDateTime.now(),
+                HttpStatus.FORBIDDEN.value(),
+                HttpStatus.FORBIDDEN.getReasonPhrase(),
+                "No tiene permiso para esta operación",
+                List.of("No tiene permiso para esta operación")
+            ));
+    }
+
+    @ExceptionHandler(RecursoNoEncontradoException.class)
+    public ResponseEntity<ErrorResponse> handleRecursoNoEncontrado(RecursoNoEncontradoException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body(new ErrorResponse(
+                LocalDateTime.now(),
+                HttpStatus.NOT_FOUND.value(),
+                HttpStatus.NOT_FOUND.getReasonPhrase(),
+                ex.getMessage(),
+                List.of(ex.getMessage())
+            ));
+    }
+
+    @ExceptionHandler(ConflictoException.class)
+    public ResponseEntity<ErrorResponse> handleConflicto(ConflictoException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+            .body(new ErrorResponse(
+                LocalDateTime.now(),
+                HttpStatus.CONFLICT.value(),
+                HttpStatus.CONFLICT.getReasonPhrase(),
+                ex.getMessage(),
+                List.of(ex.getMessage())
+            ));
+    }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleValidationErrors(MethodArgumentNotValidException ex) {

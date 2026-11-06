@@ -11,8 +11,13 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,8 +56,27 @@ public class SemilleroController {
             )
     })
     @PostMapping
+    @PreAuthorize("hasRole('ADMINISTRADOR')")                               // NUEVO
     public ResponseEntity<SemilleroResponse> crear(
             @Valid @RequestBody SemilleroRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.crear(request));
+    }
+
+    @GetMapping                                                             // NUEVO
+    @PreAuthorize("hasRole('ADMINISTRADOR')")
+    public List<SemilleroResponse> listar() {
+        return service.listar();
+    }
+
+    @GetMapping("/mios")                                                    // NUEVO
+    @PreAuthorize("hasAnyRole('DIRECTOR','MIEMBRO')")
+    public List<SemilleroResponse> mios(Authentication auth) {
+        return service.mios(auth);
+    }
+
+    @GetMapping("/{semilleroId}")                                           // NUEVO
+    @PreAuthorize("@acceso.puedeVer(#semilleroId, authentication)")
+    public SemilleroResponse obtener(@PathVariable Long semilleroId) {
+        return service.obtener(semilleroId);
     }
 }

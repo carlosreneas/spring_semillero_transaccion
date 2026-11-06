@@ -335,3 +335,111 @@ En la Sesión 2 de la práctica se implementaron ambos enfoques:
 ### 6. ¿Qué regla debe validarse en el servicio y cuál conviene reforzar en la base de datos?
 - **En el servicio**: Lógica de negocio relacional y de flujo, mensajes amigables al usuario (por ejemplo: que haya exactamente un integrante líder, que los códigos de la petición no vengan duplicados, o que existan líneas válidas).
 - **En la base de datos**: Restricciones de integridad estructural definitivas (claves primarias, claves foráneas `REFERENCES`, restricciones `UNIQUE` sobre la sigla o correo, e índices parciales como `uq_semillero_un_lider WHERE es_lider = true`) para evitar anomalías incluso frente a accesos concurrentes o scripts externos.
+
+---
+
+## 9. Seguridad con Spring Security y JWT
+
+### 9.1 Usuarios de Prueba (`DemoData`)
+
+Al iniciar la aplicación, `DemoData` crea automáticamente 6 cuentas de demostración si la tabla `usuarios` está vacía. **Todas usan la contraseña `Clave123!`**:
+
+| Nombre | Email (`email`) | Password | Rol | Código Estudiantil |
+|---|---|---|---|---|
+| Administración | `admin@universidad.edu.co` | `Clave123!` | `ADMINISTRADOR` | *(null)* |
+| Directora Software | `director.software@universidad.edu.co` | `Clave123!` | `DIRECTOR` | *(null)* |
+| Director Datos | `director.datos@universidad.edu.co` | `Clave123!` | `DIRECTOR` | *(null)* |
+| Miembro Uno | `miembro1@universidad.edu.co` | `Clave123!` | `MIEMBRO` | `2026901` |
+| Miembro Dos | `miembro2@universidad.edu.co` | `Clave123!` | `MIEMBRO` | `2026902` |
+| Miembro Tres | `miembro3@universidad.edu.co` | `Clave123!` | `MIEMBRO` | `2026903` |
+
+### 9.2 Cómo Generar y Usar el Token JWT
+
+1. **Iniciar sesión (`POST /api/auth/login`)**:
+   ```json
+   {
+     "email": "admin@universidad.edu.co",
+     "password": "Clave123!"
+   }
+   ```
+2. **Respuesta (`200 OK`)**:
+   ```json
+   {
+     "accessToken": "eyJhbGciOiJIUzI1NiJ9...",
+     "tokenType": "Bearer",
+     "expiresInSeconds": 3600
+   }
+   ```
+3. **Uso en Swagger UI (`http://localhost:8080/swagger-ui/index.html`)**:
+   - Copia el valor de `accessToken`.
+   - Haz clic en el botón **Authorize** y pega el token (sin el prefijo `Bearer`).
+4. **Uso en Postman / cURL**:
+   - Agrega el encabezado `Authorization: Bearer <accessToken>`.
+
+### 9.3 Matriz de Endpoints Protegidos
+
+| Operación | Endpoint | `ADMINISTRADOR` | `DIRECTOR` | `MIEMBRO` |
+|---|---|:---:|:---:|:---:|
+| Iniciar sesión | `POST /api/auth/login` | Sí | Sí | Sí |
+| Ver mi identidad | `GET /api/auth/yo` | Sí | Sí | Sí |
+| Listar / Crear usuarios | `GET` / `POST /api/usuarios` | Sí | No (403) | No (403) |
+| Registrar semillero | `POST /api/semilleros` | Sí | No (403) | No (403) |
+| Listar todos los semilleros | `GET /api/semilleros` | Sí | No (403) | No (403) |
+| Ver mis semilleros | `GET /api/semilleros/mios` | No (403) | Los que dirige | Los que integra |
+| Ver semillero por ID | `GET /api/semilleros/{id}` | Sí | Solo si lo dirige | Solo si lo integra |
+
+### 9.4 JSON de Semilleros de Prueba (Sección 11.1 de la Guía)
+
+Autenticado con el token de **`admin@universidad.edu.co`**, puedes registrar los dos semilleros enlazados con las cuentas de prueba en `POST /api/semilleros`:
+
+**Semillero 1 (`SIS-01` — dirigido por `director.software@universidad.edu.co`, miembros `2026901` y `2026902`):**
+```json
+{
+  "nombre": "Semillero de Ingeniería de Software",
+  "sigla": "SIS-01",
+  "grupoInvestigacion": "Grupo de Ingeniería de Software",
+  "director": {
+    "nombre": "Directora Software",
+    "correo": "director.software@universidad.edu.co"
+  },
+  "lineas": ["APIs seguras", "Calidad de software"],
+  "integrantes": [
+    {
+      "codigo": "2026901",
+      "nombre": "Miembro Uno",
+      "programa": "Ingeniería de Sistemas",
+      "esLider": true
+    },
+    {
+      "codigo": "2026902",
+      "nombre": "Miembro Dos",
+      "programa": "Ingeniería de Sistemas",
+      "esLider": false
+    }
+  ]
+}
+```
+
+**Semillero 2 (`SAD-01` — dirigido por `director.datos@universidad.edu.co`, miembro `2026903`):**
+```json
+{
+  "nombre": "Semillero de Analítica de Datos",
+  "sigla": "SAD-01",
+  "grupoInvestigacion": "Grupo de Analítica",
+  "director": {
+    "nombre": "Director Datos",
+    "correo": "director.datos@universidad.edu.co"
+  },
+  "lineas": ["Ciencia de datos"],
+  "integrantes": [
+    {
+      "codigo": "2026903",
+      "nombre": "Miembro Tres",
+      "programa": "Ingeniería de Sistemas",
+      "esLider": true
+    }
+  ]
+}
+```
+
+

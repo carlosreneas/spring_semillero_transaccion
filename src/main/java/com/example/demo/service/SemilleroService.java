@@ -7,6 +7,7 @@ import com.example.demo.entity.Director;
 import com.example.demo.entity.Integrante;
 import com.example.demo.entity.Linea;
 import com.example.demo.entity.Semillero;
+import com.example.demo.exception.RecursoNoEncontradoException;
 import com.example.demo.exception.ReglaNegocioException;
 import com.example.demo.exception.SiglaDuplicadaException;
 import com.example.demo.mapper.DirectorMapper;
@@ -16,9 +17,12 @@ import com.example.demo.repository.DirectorRepository;
 import com.example.demo.repository.IntegranteRepository;
 import com.example.demo.repository.LineaRepository;
 import com.example.demo.repository.SemilleroRepository;
+import com.example.demo.seguridad.AccesoSemillero;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,6 +33,7 @@ public class SemilleroService {
     private final SemilleroRepository semilleroRepository;
     private final LineaRepository lineaRepository;
     private final IntegranteRepository integranteRepository;
+    private final AccesoSemillero acceso;
 
     private final DirectorMapper directorMapper;
     private final IntegranteMapper integranteMapper;
@@ -42,6 +47,7 @@ public class SemilleroService {
             SemilleroRepository semilleroRepository,
             LineaRepository lineaRepository,
             IntegranteRepository integranteRepository,
+            AccesoSemillero acceso,
             DirectorMapper directorMapper,
             IntegranteMapper integranteMapper,
             SemilleroMapper semilleroMapper) {
@@ -49,6 +55,7 @@ public class SemilleroService {
         this.semilleroRepository = semilleroRepository;
         this.lineaRepository = lineaRepository;
         this.integranteRepository = integranteRepository;
+        this.acceso = acceso;
         this.directorMapper = directorMapper;
         this.integranteMapper = integranteMapper;
         this.semilleroMapper = semilleroMapper;
@@ -128,11 +135,39 @@ public class SemilleroService {
         Semillero guardado = semilleroRepository.save(semillero);
 
         // 10. Retornar DTO de respuesta
+        return toResponse(guardado);
+    }
+
+    public SemilleroResponse toResponse(Semillero guardado) {
         return new SemilleroResponse(
                 guardado.getId(),
                 guardado.getSigla(),
                 guardado.getIntegrantes().size(),
                 "REGISTRADO"
         );
+    }
+
+    @Transactional(readOnly = true)                                         // NUEVO
+    public List<SemilleroResponse> listar() {
+        return semilleroRepository.findAll().stream().map(this::toResponse).toList();
+    }
+
+    @Transactional(readOnly = true)                                         // NUEVO
+    public SemilleroResponse obtener(Long id) {
+        return semilleroRepository.findById(id).map(this::toResponse)
+            .orElseThrow(() -> new RecursoNoEncontradoException("Semillero no encontrado: " + id));
+    }
+
+    @Transactional(readOnly = true)                                         // NUEVO
+    public List<SemilleroResponse> mios(Authentication auth) {
+        Set<Semillero> resultado = new LinkedHashSet<>();
+        if (acceso.tieneRol(auth, "DIRECTOR")) {
+            resultado.addAll(semilleroRepository.findByDirectorCorreoIgnoreCase(auth.getName()));
+        }
+        if (acceso.tieneRol(auth, "MIEMBRO")) {
+            acceso.codigoDe(auth).ifPresent(c ->
+                resultado.addAll(integranteRepository.findSemillerosPorCodigo(c)));
+        }
+        return resultado.stream().map(this::toResponse).toList();
     }
 }

@@ -19,4 +19,8 @@ public record ErrorResponse(
 
         @Schema(description = "Detalles específicos del fallo")
         List<String> detalles
-) {}
+) {
+    public ErrorResponse(String mensaje) {
+        this(LocalDateTime.now(), 400, "Error", mensaje, List.of(mensaje));
+    }
+}
